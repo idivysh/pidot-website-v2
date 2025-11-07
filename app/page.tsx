@@ -7,6 +7,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { HeroHighlightDemo } from "@/components/sections/hero-highlight";
 import { GlowingEffectDemo } from "@/components/sections/glowing-effect"
+import { LayoutGridDemo } from "@/components/sections/layout-grid"
 
 
 export default function Home() {
@@ -46,6 +47,12 @@ export default function Home() {
         </div>
         <div className="p-30">
             <GlowingEffectDemo />
+        </div>
+        <div>
+            <HeroHighlightDemo />
+        </div>
+        <div>
+            <LayoutGridDemo />
         </div>
       </div>
 
