@@ -1,15 +1,39 @@
+"use client"
 import { NavbarDemo } from "@/components/sections/navbar-menu"
 import { FooterDemo } from "@/components/sections/footer";
 import { GlobeDemo } from "@/components/sections/globe";
+import { StickyBanner } from "@/components/ui/sticky-banner";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 
 
 export default function Home() {
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
   return (
     <main className="min-h-screen flex flex-col">
       {/* Fixed Navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <StickyBanner
+        open={isBannerOpen}
+        setOpen={setIsBannerOpen}
+        className="bg-gradient-to-b from-blue-500 to-blue-600"
+      >
+        <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
+          Announcing $10M seed funding from project mayhem ventures.{" "}
+          <a href="#" className="transition duration-200 hover:underline">
+            Read announcement
+          </a>
+        </p>
+      </StickyBanner>
+
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-50"
+        animate={{
+          y: isBannerOpen ? 56 : 0,
+        }}
+      >
         <NavbarDemo />
-      </div>
+      </motion.div>
 
       {/* Page Content */}
       <div className="flex-1 pt-24 pb-24"> {/* padding to avoid overlap */}
