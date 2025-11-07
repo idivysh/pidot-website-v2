@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import { HeroHighlightDemo } from "@/components/sections/hero-highlight";
 import { GlowingEffectDemo } from "@/components/sections/glowing-effect"
 import { LayoutGridDemo } from "@/components/sections/layout-grid"
+import { TabsDemo } from "@/components/sections/tabs"
+import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-effect"
+
 
 
 export default function Home() {
@@ -53,6 +56,12 @@ export default function Home() {
         </div>
         <div>
             <LayoutGridDemo />
+        </div>
+        <div>
+            <TabsDemo />
+        </div>
+        <div className="mt-50">
+            <TypewriterEffectSmoothDemo />
         </div>
       </div>
 
