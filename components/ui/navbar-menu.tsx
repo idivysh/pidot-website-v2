@@ -76,9 +76,22 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex items-center justify-left space-x-5 px-8 py-5 w-350"
+
     >
+    <div className="flex space-x-4">
+      <img src={"assets/PiDot/Logomark/SVG/White.svg"}
+      width={40}
+      height={40}
+      />
+      <img src={"assets/PiDot/Wordmark/SVG/White.svg"}
+      width={100}
+      height={50}
+      />
+    </div>
+    <div className="flex space-x-4 mx-80">
       {children}
+    </div>
     </nav>
   );
 };
