@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
+import { motion, AnimatePresence } from "motion/react";
+import { MenuItem, ProductItem, HoveredLink } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export function NavbarDemo() {
   return (
@@ -13,6 +15,12 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null); // for mobile submenu toggle
+
+  const toggleSubMenu = (menu: string) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
 
   return (
     <div
@@ -21,10 +29,9 @@ function Navbar({ className }: { className?: string }) {
         className
       )}
     >
-      {/* ✅ Full-width black rounded nav (now wider) */}
       <nav
         onMouseLeave={() => setActive(null)}
-        className="relative w-[98%] mx-auto flex items-center justify-between rounded-full border border-black/20 dark:border-white/20 bg-white dark:bg-black shadow-lg px-10 py-5"
+        className="relative w-[98%] mx-auto flex items-center justify-between rounded-full border border-black/20 dark:border-white/20 bg-white dark:bg-black shadow-lg px-8 py-5"
       >
         {/* 🖤 Left Section - Logo */}
         <div className="flex items-center space-x-3">
@@ -44,8 +51,8 @@ function Navbar({ className }: { className?: string }) {
           />
         </div>
 
-        {/* ⚡ Center Section - Menu Items */}
-        <div className="flex justify-center flex-1">
+        {/* ⚡ Desktop Menu (Unchanged) */}
+        <div className="hidden md:flex justify-center flex-1">
           <div className="flex space-x-5">
             <MenuItem setActive={setActive} active={active} item="Products">
               <div className="text-sm grid grid-cols-2 gap-10 p-4">
@@ -112,7 +119,144 @@ function Navbar({ className }: { className?: string }) {
             </MenuItem>
           </div>
         </div>
+
+        {/* 🍔 Mobile Hamburger */}
+        <button
+          className="md:hidden flex items-center justify-center p-2"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? (
+            <X className="w-6 h-6 text-black dark:text-white" />
+          ) : (
+            <Menu className="w-6 h-6 text-black dark:text-white" />
+          )}
+        </button>
       </nav>
+
+      {/* 📱 Mobile Menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-20 w-[90%] bg-white dark:bg-black border border-black/10 dark:border-white/10 rounded-2xl shadow-lg p-5 flex flex-col md:hidden"
+          >
+            {/* Products */}
+            <MobileDropdown
+              title="Products"
+              isOpen={openMenu === "Products"}
+              toggle={() => toggleSubMenu("Products")}
+              items={[
+                { label: "Algochurn", href: "https://algochurn.com" },
+                { label: "Tailwind Master Kit", href: "https://tailwindmasterkit.com" },
+                { label: "Moonbeam", href: "https://gomoonbeam.com" },
+                { label: "Rogue", href: "https://userogue.com" },
+              ]}
+            />
+
+            {/* Enterprise */}
+            <MobileDropdown
+              title="Enterprise"
+              isOpen={openMenu === "Enterprise"}
+              toggle={() => toggleSubMenu("Enterprise")}
+              items={[
+                { label: "Web Development", href: "/web-dev" },
+                { label: "Interface Design", href: "/interface-design" },
+                { label: "SEO Optimization", href: "/seo" },
+                { label: "Branding", href: "/branding" },
+              ]}
+            />
+
+            {/* About */}
+            <MobileDropdown
+              title="About"
+              isOpen={openMenu === "About"}
+              toggle={() => toggleSubMenu("About")}
+              items={[
+                { label: "Our Team", href: "/team" },
+                { label: "Mission", href: "/mission" },
+                { label: "Vision", href: "/vision" },
+                { label: "Careers", href: "/careers" },
+              ]}
+            />
+
+            {/* Career */}
+            <MobileDropdown
+              title="Career"
+              isOpen={openMenu === "Career"}
+              toggle={() => toggleSubMenu("Career")}
+              items={[
+                { label: "Internships", href: "/internships" },
+                { label: "Job Openings", href: "/jobs" },
+                { label: "Apply Now", href: "/apply" },
+              ]}
+            />
+
+            {/* Blog */}
+            <MobileDropdown
+              title="Blog"
+              isOpen={openMenu === "Blog"}
+              toggle={() => toggleSubMenu("Blog")}
+              items={[
+                { label: "Hobby", href: "/hobby" },
+                { label: "Individual", href: "/individual" },
+                { label: "Team", href: "/team" },
+                { label: "Enterprise", href: "/enterprise" },
+              ]}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+/* ✅ Mobile Submenu Component */
+function MobileDropdown({
+  title,
+  isOpen,
+  toggle,
+  items,
+}: {
+  title: string;
+  isOpen: boolean;
+  toggle: () => void;
+  items: { label: string; href: string }[];
+}) {
+  return (
+    <div className="border-b border-black/10 dark:border-white/10 py-2">
+      <button
+        onClick={toggle}
+        className="w-full flex justify-between items-center text-lg text-black dark:text-white"
+      >
+        {title}
+        <ChevronDown
+          className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="pl-4 mt-2 flex flex-col space-y-2"
+          >
+            {items.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-sm text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function Home() {
       </StickyBanner>
 
       <motion.div
-        className="fixed top-0 left-20 right-20 z-50"
+        className="fixed sm:top-0 top-5 z-50 w-full flex items-center justify-center"
         animate={{
           y: isBannerOpen ? 56 : 0,
         }}
@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* Page Content */}
       <div className="flex-1 pt-24 pb-24"> {/* padding to avoid overlap */}
-        <section className="max-w-6xl mx-auto px-6 py-10 text-center">
+        <section className="max-w-6xl mx-auto px-6 text-center">
           <GlobeDemo />
         </section>
         <div>
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="mt-10">
             <HeroHighlightDemo />
         </div>
-        <div className="p-30">
+        <div className="ms:p-30 md:p-30 p-15">
             <GlowingEffectDemo />
         </div>
         <div>
@@ -64,7 +64,7 @@ export default function Home() {
         <div>
             <TabsDemo />
         </div>
-        <div className="mt-50">
+        <div className="sm:mt-50 mt-40">
             <TypewriterEffectSmoothDemo />
         </div>
       </div>

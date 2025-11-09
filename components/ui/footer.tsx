@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const spring = {
   type: "spring",
@@ -69,7 +70,20 @@ export const Footer = () => {
               whileHover={{ rotate: 20 }}
               transition={spring}
             />
-            <span className="text-xl font-semibold text-white">Pi Dot</span>
+            <div className="flex items-center gap-2">
+            <Image
+              src="/assets/PiDot/Logomark/SVG/White.svg"
+              alt="Pi Dot Logomark"
+              width={32}
+              height={32}
+            />
+            <Image
+              src="/assets/PiDot/Wordmark/SVG/White.svg"
+              alt="Pi Dot Wordmark"
+              width={100}
+              height={32}
+            />
+          </div>
           </div>
           <p className="mt-2 text-sm text-gray-400">
             © 2025 Pi Dot™. All Rights Reserved.
