@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"], // include needed weights
 });
 
 export const metadata: Metadata = {
@@ -24,14 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/PiDot/Logomark/SVG/White.svg" type="image/svg+xml" sizes="any" />
+        <link
+          rel="icon"
+          href="/assets/PiDot/Logomark/SVG/White.svg"
+          type="image/svg+xml"
+          sizes="any"
+        />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} font-sans antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
-
