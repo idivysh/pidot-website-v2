@@ -11,6 +11,9 @@ import { LayoutGridDemo } from "@/components/sections/layout-grid"
 import { TabsDemo } from "@/components/sections/tabs"
 import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-effect"
 import { InfiniteMovingCardsDemo } from "@/components/sections/infinite-moving-cards"
+import { ScrollPinnedSection } from "@/components/ui/scroll-pinned-section"
+import { ScrollScene } from "@/components/sections/scroll-pinned-section"
+
 
 
 
@@ -64,7 +67,10 @@ export default function Home() {
         <div>
             <TabsDemo />
         </div>
-        <div className="sm:mt-50 mt-40">
+        <div className="mt-40">
+            <ScrollScene />
+        </div>
+        <div className="sm:mt-30 mt-20">
             <TypewriterEffectSmoothDemo />
         </div>
       </div>
