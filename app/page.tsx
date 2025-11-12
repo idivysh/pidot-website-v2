@@ -8,10 +8,8 @@ import { motion } from "framer-motion";
 import { HeroHighlightDemo } from "@/components/sections/hero-highlight";
 import { GlowingEffectDemo } from "@/components/sections/glowing-effect"
 import { LayoutGridDemo } from "@/components/sections/layout-grid"
-import { TabsDemo } from "@/components/sections/tabs"
 import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-effect"
 import { InfiniteMovingCardsDemo } from "@/components/sections/infinite-moving-cards"
-import { ScrollPinnedSection } from "@/components/ui/scroll-pinned-section"
 import { ScrollScene } from "@/components/sections/scroll-pinned-section"
 
 
@@ -49,6 +47,9 @@ export default function Home() {
         <section className="max-w-6xl mx-auto px-6 text-center">
           <GlobeDemo />
         </section>
+        <div className="mt-40">
+            <ScrollScene />
+        </div>
         <div>
           <InfiniteMovingCardsDemo />
         </div>
@@ -64,13 +65,7 @@ export default function Home() {
         <div>
             <LayoutGridDemo />
         </div>
-        <div>
-            <TabsDemo />
-        </div>
-        <div className="mt-40">
-            <ScrollScene />
-        </div>
-        <div className="sm:mt-30 mt-20">
+        <div className="mt-5">
             <TypewriterEffectSmoothDemo />
         </div>
       </div>
