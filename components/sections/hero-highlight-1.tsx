@@ -20,9 +20,9 @@ export function HeroHighlightDemo1() {
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        Fermion AI Labs as the frontier of AI innovation - Where communities learn, build, {" "}
+        Fermion AI Labs as the frontier of AI innovation - Where communities learn, build,and push AI beyond {" "}
         <Highlight className="text-black dark:text-white">
-          and push AI beyond boundaries.
+          boundaries.
         </Highlight>
       </motion.h1>
     </HeroHighlight>

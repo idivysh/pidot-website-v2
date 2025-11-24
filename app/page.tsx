@@ -38,14 +38,14 @@ export default function Home() {
       >
         <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
           Reach out to us to redefine hiring. {" "}
-          <a href="#" className="transition duration-200 hover:underline">
+          <a href="#" className="transition duration-200 underline">
             Contact us
           </a>
         </p>
       </StickyBanner>
 
       <motion.div
-        className="fixed sm:top-0 top-5 z-50 w-full flex items-center justify-center"
+        className="fixed sm:top-5 top-10 z-50 w-full flex items-center justify-center"
         animate={{
           y: isBannerOpen ? 56 : 0,
         }}
