@@ -3,20 +3,31 @@ import { NavbarDemo } from "@/components/sections/navbar-menu"
 import { FooterDemo } from "@/components/sections/footer";
 import { GlobeDemo } from "@/components/sections/globe";
 import { StickyBanner } from "@/components/ui/sticky-banner";
-import { useState } from "react";
+import { useState, useEffect } from "react";   // ⬅️ add useEffect here
 import { motion } from "framer-motion";
 import { HeroHighlightDemo } from "@/components/sections/hero-highlight";
 import { GlowingEffectDemo } from "@/components/sections/glowing-effect"
+import { HeroHighlightDemo1 } from "@/components/sections/hero-highlight-1";
 import { LayoutGridDemo } from "@/components/sections/layout-grid"
 import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-effect"
 import { InfiniteMovingCardsDemo } from "@/components/sections/infinite-moving-cards"
-import { ScrollScene } from "@/components/sections/scroll-pinned-section"
-
-
-
+// import { ScrollScene } from "@/components/sections/scroll-pinned-section"
 
 export default function Home() {
   const [isBannerOpen, setIsBannerOpen] = useState(true);
+
+  // 👇 This runs once on load and puts user at the very top
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Disable browser’s automatic scroll restore
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+      // Jump to very top
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <main className="min-h-screen flex flex-col">
       {/* Fixed Navbar */}
@@ -43,30 +54,28 @@ export default function Home() {
       </motion.div>
 
       {/* Page Content */}
-      <div className="flex-1 pt-24 pb-24"> {/* padding to avoid overlap */}
+      <div className="flex-1 pt-24 pb-24">
         <section className="max-w-6xl mx-auto px-6 text-center">
           <GlobeDemo />
         </section>
-        <div className="mt-40">
-            <ScrollScene />
-        </div>
+
         <div>
           <InfiniteMovingCardsDemo />
         </div>
         <div className="mt-10">
-            <HeroHighlightDemo />
+          <HeroHighlightDemo />
         </div>
         <div className="ms:p-30 md:p-30 p-15">
-            <GlowingEffectDemo />
+          <GlowingEffectDemo />
         </div>
         <div>
-            <HeroHighlightDemo />
+          <HeroHighlightDemo1 />
         </div>
         <div>
-            <LayoutGridDemo />
+          <LayoutGridDemo />
         </div>
         <div className="mt-5">
-            <TypewriterEffectSmoothDemo />
+          <TypewriterEffectSmoothDemo />
         </div>
       </div>
 

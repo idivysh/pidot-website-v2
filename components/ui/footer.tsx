@@ -86,38 +86,64 @@ export const Footer = () => {
           </div>
           </div>
           <p className="mt-2 text-sm text-gray-400">
-            © 2025 Pi Dot™. All Rights Reserved.
+            © 2025 EMELEX Business Solutions LLP. All rights reserved.
           </p>
         </motion.div>
 
         {/* Link Sections */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
           <FooterSection
-            title="RESOURCES"
+            title="PI DOT"
             links={[
-              { label: "Next.js Docs", href: "https://nextjs.org/docs" },
-              { label: "Tailwind CSS", href: "https://tailwindcss.com" },
+              { label: "About Us", href: "" },
+              { label: "Leadership", href: "" },
+              { label: "Our Story", href: "" },
+              { label: "Careers", href: "" },
+              { label: "Contact", href: "" },
             ]}
           />
           <FooterSection
-            title="FOLLOW US"
+            title="ENTERPRISE"
             links={[
-              { label: "GitHub", href: "#" },
-              { label: "Discord", href: "#" },
+              { label: "PI DOT for Enterprise", href: "" },
+              { label: "Enterprise Guides", href: "" },
+              { label: "Security", href: "" },
+              { label: "ROI Calculator", href: "" },
+              { label: "Book a Call", href: "" },
+            ]}
+          />
+          <FooterSection
+            title="RESOURCES"
+            links={[
+              { label: "Manifesto", href: "" },
+              { label: "Case Studies", href: "" },
+              { label: "Press & Media", href: "" },
+              { label: "Research Papers", href: "" },
+              { label: "Community & Events", href: "" },
+            ]}
+          />
+          <FooterSection
+            title="SUPPORT"
+            links={[
+              { label: "Help Center", href: "" },
+              { label: "Report an Issue", href: "" },
+              { label: "Contact Support", href: "" },
             ]}
           />
           <FooterSection
             title="LEGAL"
             links={[
-              { label: "Privacy Policy", href: "#" },
-              { label: "Terms & Conditions", href: "#" },
+              { label: "Privacy Policy", href: "" },
+              { label: "Terms of Service", href: "" },
+              { label: "Data Processing Agreement", href: "" },
+              { label: "Cookies & Compliance", href: "" },
             ]}
           />
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <motion.div
+      {/* <motion.div
         className="border-t border-gray-800"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -129,7 +155,7 @@ export const Footer = () => {
             <span className="text-cyan-400">Tailwind CSS</span>
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
     </footer>
   );
 };

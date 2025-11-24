@@ -17,7 +17,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "Where leadership, decision-making, and AI converge to train the next generation of Thinkers.",
-    date: "28th March, 2023",
+    date: "August 2025",
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80",
   },
@@ -26,7 +26,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "Built by Fermion AI Labs — benchmarked to outperform ChatGPT in mathematical reasoning and logic.",
-    date: "5th April, 2023",
+    date: "November 2025",
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80",
   },
@@ -35,7 +35,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "CSP mirrors the pulse of corporate life — decisions, dilemmas, and the pressure of real consequence.",
-    date: "11th May, 2023",
+    date: "September 2025",
     image:
       "https://images.unsplash.com/photo-1506765515384-028b60a970df?w=500&q=80",
   },
@@ -44,7 +44,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "CSP’s structured learning path transforms students into industry-ready professionals.",
-    date: "21st June, 2023",
+    date: "September 2025",
     image:
       "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=500&q=80",
   },
@@ -53,7 +53,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "Fermion AI Labs is where the next generation of builders, thinkers, and engineers learn to shape intelligence.",
-    date: "12th July, 2023",
+    date: "July 2025",
     image:
       "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&q=80",
   },
@@ -62,7 +62,7 @@ const blogCards = [
     subtitle: "",
     quote:
       "PI DOT’s adaptive intelligence crafts personalized simulation paths based on real-time learner data.",
-    date: "2nd August, 2023",
+    date: "November 2025",
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80",
   },

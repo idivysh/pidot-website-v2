@@ -55,7 +55,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="hidden md:flex justify-center flex-1">
           <div className="flex space-x-5">
             <MenuItem setActive={setActive} active={active} item="Products">
-              <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              {/* <div className="text-sm grid grid-cols-2 gap-10 p-4">
                 <ProductItem
                   title="Algochurn"
                   href="https://algochurn.com"
@@ -80,42 +80,42 @@ function Navbar({ className }: { className?: string }) {
                   src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
                   description="Respond to RFPs 10x faster using AI."
                 />
-              </div>
+              </div> */}
             </MenuItem>
 
             <MenuItem setActive={setActive} active={active} item="Enterprise">
-              <div className="flex flex-col space-y-4 text-sm">
+              {/* <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
                 <HoveredLink href="/interface-design">Interface Design</HoveredLink>
                 <HoveredLink href="/seo">SEO Optimization</HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
-              </div>
+              </div> */}
             </MenuItem>
 
             <MenuItem setActive={setActive} active={active} item="About">
-              <div className="flex flex-col space-y-4 text-sm">
+              {/* <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/team">Our Team</HoveredLink>
                 <HoveredLink href="/mission">Mission</HoveredLink>
                 <HoveredLink href="/vision">Vision</HoveredLink>
                 <HoveredLink href="/careers">Careers</HoveredLink>
-              </div>
+              </div> */}
             </MenuItem>
 
             <MenuItem setActive={setActive} active={active} item="Career">
-              <div className="flex flex-col space-y-4 text-sm">
+              {/* <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/internships">Internships</HoveredLink>
                 <HoveredLink href="/jobs">Job Openings</HoveredLink>
                 <HoveredLink href="/apply">Apply Now</HoveredLink>
-              </div>
+              </div> */}
             </MenuItem>
 
             <MenuItem setActive={setActive} active={active} item="Blog">
-              <div className="flex flex-col space-y-4 text-sm">
+              {/* <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/hobby">Hobby</HoveredLink>
                 <HoveredLink href="/individual">Individual</HoveredLink>
                 <HoveredLink href="/team">Team</HoveredLink>
                 <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-              </div>
+              </div> */}
             </MenuItem>
           </div>
         </div>
@@ -149,10 +149,10 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "Products"}
               toggle={() => toggleSubMenu("Products")}
               items={[
-                { label: "Algochurn", href: "https://algochurn.com" },
-                { label: "Tailwind Master Kit", href: "https://tailwindmasterkit.com" },
-                { label: "Moonbeam", href: "https://gomoonbeam.com" },
-                { label: "Rogue", href: "https://userogue.com" },
+                // { label: "Algochurn", href: "https://algochurn.com" },
+                // { label: "Tailwind Master Kit", href: "https://tailwindmasterkit.com" },
+                // { label: "Moonbeam", href: "https://gomoonbeam.com" },
+                // { label: "Rogue", href: "https://userogue.com" },
               ]}
             />
 
@@ -162,10 +162,10 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "Enterprise"}
               toggle={() => toggleSubMenu("Enterprise")}
               items={[
-                { label: "Web Development", href: "/web-dev" },
-                { label: "Interface Design", href: "/interface-design" },
-                { label: "SEO Optimization", href: "/seo" },
-                { label: "Branding", href: "/branding" },
+                // { label: "Web Development", href: "/web-dev" },
+                // { label: "Interface Design", href: "/interface-design" },
+                // { label: "SEO Optimization", href: "/seo" },
+                // { label: "Branding", href: "/branding" },
               ]}
             />
 
@@ -175,10 +175,10 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "About"}
               toggle={() => toggleSubMenu("About")}
               items={[
-                { label: "Our Team", href: "/team" },
-                { label: "Mission", href: "/mission" },
-                { label: "Vision", href: "/vision" },
-                { label: "Careers", href: "/careers" },
+                // { label: "Our Team", href: "/team" },
+                // { label: "Mission", href: "/mission" },
+                // { label: "Vision", href: "/vision" },
+                // { label: "Careers", href: "/careers" },
               ]}
             />
 
@@ -188,9 +188,9 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "Career"}
               toggle={() => toggleSubMenu("Career")}
               items={[
-                { label: "Internships", href: "/internships" },
-                { label: "Job Openings", href: "/jobs" },
-                { label: "Apply Now", href: "/apply" },
+                // { label: "Internships", href: "/internships" },
+                // { label: "Job Openings", href: "/jobs" },
+                // { label: "Apply Now", href: "/apply" },
               ]}
             />
 
@@ -200,10 +200,10 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "Blog"}
               toggle={() => toggleSubMenu("Blog")}
               items={[
-                { label: "Hobby", href: "/hobby" },
-                { label: "Individual", href: "/individual" },
-                { label: "Team", href: "/team" },
-                { label: "Enterprise", href: "/enterprise" },
+                // { label: "Hobby", href: "/hobby" },
+                // { label: "Individual", href: "/individual" },
+                // { label: "Team", href: "/team" },
+                // { label: "Enterprise", href: "/enterprise" },
               ]}
             />
           </motion.div>
