@@ -31,7 +31,7 @@ function Navbar({ className }: { className?: string }) {
     >
       <nav
         onMouseLeave={() => setActive(null)}
-        className="relative w-[98%] mx-auto flex items-center justify-between rounded-full border border-black/20 dark:border-white/20 bg-white dark:bg-black shadow-lg px-8 py-5"
+        className="relative w-[98%] mx-auto flex items-center justify-between border border-black/20 dark:border-white/20 bg-white dark:bg-black shadow-lg px-8 py-5"
       >
         {/* 🖤 Left Section - Logo */}
         <div className="flex items-center space-x-3">

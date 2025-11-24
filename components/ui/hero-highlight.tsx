@@ -20,15 +20,15 @@ export const HeroHighlight = ({
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // SVG patterns for different states and themes
+  // Updated SVG patterns for #f69507 theme
   const dotPatterns = {
     light: {
-      default: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23d4d4d4' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
-      hover: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%236366f1' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
+      default: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23f3d19f' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
+      hover: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23f69507' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
     },
     dark: {
       default: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23404040' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
-      hover: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%238183f4' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
+      hover: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23f69507' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`,
     },
   };
 
@@ -61,7 +61,7 @@ export const HeroHighlight = ({
         style={{ backgroundImage: dotPatterns.dark.default }}
       />
 
-      {/* Hover effect */}
+      {/* Hover Background Lighting */}
       <motion.div
         className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 dark:hidden"
         style={{
@@ -104,7 +104,7 @@ export const HeroHighlight = ({
   );
 };
 
-// 🔥 Scroll-Triggered Highlight Animation
+// ⭐ Highlight Component — updated to #f69507 gradient
 export const Highlight = ({
   children,
   className,
@@ -113,14 +113,12 @@ export const Highlight = ({
   className?: string;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 }); // triggers when 50% visible
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <motion.span
       ref={ref}
-      initial={{
-        backgroundSize: "0% 100%",
-      }}
+      initial={{ backgroundSize: "0% 100%" }}
       animate={
         isInView
           ? { backgroundSize: "100% 100%" }
@@ -129,7 +127,7 @@ export const Highlight = ({
       transition={{
         duration: 2,
         ease: "linear",
-        delay: isInView ? 0.4 : 0, // starts when visible
+        delay: isInView ? 0.4 : 0,
       }}
       style={{
         backgroundRepeat: "no-repeat",
@@ -137,8 +135,10 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 
-         dark:from-indigo-500 dark:to-purple-500 px-1 pb-1`,
+        `relative inline-block rounded-lg 
+         bg-gradient-to-r from-[#f6b557] to-[#f69507]
+         dark:from-[#f6b557] dark:to-[#f69507]
+         px-1 pb-1`,
         className
       )}
     >

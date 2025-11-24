@@ -9,7 +9,7 @@ export function TypewriterEffectSmoothDemo() {
     { text: "session" },
     {
       text: "Today.",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-[#f69507] dark:text-[#f69507]",
     },
   ];
 

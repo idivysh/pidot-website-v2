@@ -64,9 +64,9 @@ export const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={spring}
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mb-5">
             <motion.div
-              className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400"
+              // className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400"
               whileHover={{ rotate: 20 }}
               transition={spring}
             />

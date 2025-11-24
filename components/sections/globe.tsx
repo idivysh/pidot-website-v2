@@ -30,7 +30,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       autoRotate: true,
       autoRotateSpeed: 0.5,
     };
-    const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+    const colors = ["#06b6d4", "#f69507", "#6366f1"];
     const sampleArcs = [
       {
         order: 1,
@@ -397,14 +397,14 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   return (
     <section className="relative w-full flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black">
       {/* === Text Section === */}
-      <div className="max-w-7xl mx-auto text-center px-4 ms:mt-10 mt-20 mb-12 z-20">
+      <div className="max-w-7xl mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-2xl md:text-4xl font-bold text-black dark:text-white"
         >
-          Enterprise Talent Hiring Redefined
+          Enterprise Hiring Redefined
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -412,7 +412,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-3 mx-auto"
         >
-          AI Powered Hiring Simulation Software for global teams.
+          AI Powered Simulation Software for Hiring Global Teams.
         </motion.p>
       </div>
 

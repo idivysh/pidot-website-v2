@@ -34,12 +34,12 @@ export default function Home() {
       <StickyBanner
         open={isBannerOpen}
         setOpen={setIsBannerOpen}
-        className="bg-gradient-to-b from-blue-500 to-blue-600"
+        className="bg-gradient-to-b from-[#d17c00] to-[#f69507]"
       >
         <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
-          Announcing $10M seed funding from project mayhem ventures.{" "}
+          Reach out to us to redefine hiring. {" "}
           <a href="#" className="transition duration-200 hover:underline">
-            Read announcement
+            Contact us
           </a>
         </p>
       </StickyBanner>
