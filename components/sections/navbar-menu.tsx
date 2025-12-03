@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MenuItem, HoveredLink } from "../ui/navbar-menu";
+import { MenuItem, HoveredLink, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -38,14 +38,14 @@ function Navbar({ className }: { className?: string }) {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
-            src={"assets/PiDot/Logomark/SVG/White.svg"}
+            src={"assets/PiDot/Logomark/SVG/Regular.svg"}
             width={40}
             height={40}
             alt="Logo Mark"
             className="invert dark:invert-0"
           />
           <img
-            src={"assets/PiDot/Wordmark/SVG/White.svg"}
+            src={"assets/PiDot/Wordmark/SVG/Pi_Dot_Mustard__3_-removebg-preview.svg"}
             width={100}
             height={50}
             alt="Word Mark"
@@ -56,8 +56,46 @@ function Navbar({ className }: { className?: string }) {
         {/* Desktop Menu */}
         <div className="hidden md:flex justify-center flex-1">
           <div className="flex space-x-5">
-            <MenuItem setActive={setActive} active={active} item="Products"></MenuItem>
-            <MenuItem setActive={setActive} active={active} item="Enterprise"></MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Institutions">
+              <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+                  <ProductItem
+                    title="Corporate Simulation"
+                    href="https://pidot.in"
+                    src="https://assets.aceternity.com/demos/algochurn.webp"
+                    description="Helps institutions to make their students corporate-ready"
+                  />
+                  <ProductItem
+                    title="Fermion AI Labs"
+                    href="https://pidot.in"
+                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                    description="Research-first initiative to train students on AI, LLMs & global engineering standards"
+                  />
+                  <ProductItem
+                    title="Global Education for Schools"
+                    href="https://pidot.in"
+                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                    description="Help Schools deliver globally connected curriculam through experiential learning programs"
+                  />
+              </div>
+            </MenuItem>
+
+            <MenuItem setActive={setActive} active={active} item="Enterprise">
+              <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+                  <ProductItem
+                    title="Hiring Simulation"
+                    href="https://pidot.in"
+                    src="https://assets.aceternity.com/demos/algochurn.webp"
+                    description="Helps institutions to make their students corporate-ready"
+                  />
+                  <ProductItem
+                    title="Training Simulation"
+                    href="https://pidot.in"
+                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                    description="Research-first initiative to train students on AI, LLMs & global engineering standards"
+                  />
+              </div>
+            </MenuItem>
+
             <MenuItem setActive={setActive} active={active} item="About"></MenuItem>
             <MenuItem setActive={setActive} active={active} item="Career"></MenuItem>
             <MenuItem setActive={setActive} active={active} item="Blog"></MenuItem>
@@ -92,7 +130,7 @@ function Navbar({ className }: { className?: string }) {
               title="Products"
               isOpen={openMenu === "Products"}
               toggle={() => toggleSubMenu("Products")}
-              items={[]}
+              items={[ ]}
             />
 
             <MobileDropdown
