@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/assets/PiDot/Logomark/SVG/White.svg"
+          href="/assets/PiDot/Logomark/SVG/PI dot.svg"
           type="image/svg+xml"
           sizes="any"
         />

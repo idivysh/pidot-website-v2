@@ -45,7 +45,8 @@ export default function Home() {
       </StickyBanner>
 
       <motion.div
-        className="fixed sm:top-5 top-10 z-50 w-full flex items-center justify-center"
+        // className="fixed sm:top-5 top-10 z-50 w-full flex items-center justify-center"
+        className="fixed sm:top-0 top-0 z-50 w-full flex items-center justify-center"
         animate={{
           y: isBannerOpen ? 56 : 0,
         }}
