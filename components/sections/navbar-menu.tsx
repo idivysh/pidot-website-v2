@@ -96,9 +96,26 @@ function Navbar({ className }: { className?: string }) {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="About"></MenuItem>
-            <MenuItem setActive={setActive} active={active} item="Career"></MenuItem>
-            <MenuItem setActive={setActive} active={active} item="Blog"></MenuItem>
+            <MenuItem setActive={setActive} active={active} item="About">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/web-dev">About PI DOT</HoveredLink>
+                <HoveredLink href="/interface-design">Our Team</HoveredLink>
+                <HoveredLink href="/seo">Our Services</HoveredLink>
+              </div>
+            </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Career">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/web-dev">Life at PI DOT</HoveredLink>
+                <HoveredLink href="/interface-design">Join our Team</HoveredLink>
+                <HoveredLink href="/seo">Contact</HoveredLink>
+              </div>
+            </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Blog">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/web-dev">Our Blog</HoveredLink>
+                <HoveredLink href="/web-dev">Press Note</HoveredLink>
+              </div>
+            </MenuItem>
           </div>
         </div>
 
@@ -128,37 +145,55 @@ function Navbar({ className }: { className?: string }) {
           >
             <MobileDropdown
               title="Products"
-              isOpen={openMenu === "Products"}
-              toggle={() => toggleSubMenu("Products")}
-              items={[ ]}
+              isOpen={openMenu === "Institutions"}
+              toggle={() => toggleSubMenu("Institutions")}
+              items={[
+                      { label: "Corporate Simulation", href: "/team" },
+                      { label: "Fermion AI Labs", href: "/mission" },
+                      { label: "Global Education for Schools", href: "/vision" },
+                    ]}
             />
 
             <MobileDropdown
               title="Enterprise"
               isOpen={openMenu === "Enterprise"}
               toggle={() => toggleSubMenu("Enterprise")}
-              items={[]}
+              items={[
+                      { label: "Hiring Simulation", href: "/team" },
+                      { label: "Training Simulation", href: "/mission" },
+                    ]}
             />
 
             <MobileDropdown
               title="About"
               isOpen={openMenu === "About"}
               toggle={() => toggleSubMenu("About")}
-              items={[]}
+              items={[
+                      { label: "Our Team", href: "/team" },
+                      { label: "Mission", href: "/mission" },
+                      { label: "Vision", href: "/vision" },
+                    ]}
             />
 
             <MobileDropdown
               title="Career"
               isOpen={openMenu === "Career"}
               toggle={() => toggleSubMenu("Career")}
-              items={[]}
+              items={[
+                      { label: "Life at PI DOT", href: "/team" },
+                      { label: "Careers", href: "/careers" },
+                      { label: "Contact us", href: "/careers" },
+                    ]}
             />
 
             <MobileDropdown
               title="Blog"
               isOpen={openMenu === "Blog"}
               toggle={() => toggleSubMenu("Blog")}
-              items={[]}
+              items={[
+                      { label: "Our Blog", href: "/team" },
+                      { label: "Press Note", href: "/careers" },
+                    ]}
             />
           </motion.div>
         )}
