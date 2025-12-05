@@ -397,7 +397,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
   return (
     <section className="relative w-full flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black">
       {/* === Text Section === */}
-      <div className="max-w-7xl mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20">
+      <div className="max-w-7xl mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20 ">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
