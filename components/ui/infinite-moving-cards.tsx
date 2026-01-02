@@ -343,7 +343,7 @@ const HoverCard = ({ item, index, activeIndex, onTouch, manual }: any) => {
               px-5 py-2
               rounded-full
               text-xs sm:text-sm font-medium
-              bg-black text-white
+              bg-white text-black dark:bg-black dark:text-white
               transition-transform duration-300
               hover:scale-105
               active:scale-95
@@ -352,7 +352,7 @@ const HoverCard = ({ item, index, activeIndex, onTouch, manual }: any) => {
             Read More
           </a>
         </div>
-        
+
       </div>
     </li>
   );
