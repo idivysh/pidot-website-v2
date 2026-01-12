@@ -55,7 +55,11 @@ export default function Home() {
       </motion.div>
 
       {/* Page Content */}
-      <div className="flex-1 pt-24 pb-24">
+      <div
+        className={`flex-1 pb-24 transition-all duration-300 ${
+          isBannerOpen ? "pt-24" : "pt-10"
+        }`}
+      >
         <section className="max-w-6xl mx-auto px-6 text-center">
           <GlobeDemo />
         </section>
