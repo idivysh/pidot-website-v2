@@ -5,6 +5,7 @@ import IntegrateMorningSection from '@/features/pagedemo/sections/IntegrateMorni
 import DeveloperExperienceSection from '@/features/pagedemo/sections/DeveloperExperienceSection';
 import EditorSection from '@/features/pagedemo/sections/EditorSection';
 import GoBeyondEditingSection from '@/features/pagedemo/sections/GoBeyondEditingSection';
+import EmailWithReactSection from '@/features/pagedemo/sections/EmailWithReactSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <DeveloperExperienceSection />
       <EditorSection />
       <GoBeyondEditingSection />
+      <EmailWithReactSection />
     </main>
   );
 }
