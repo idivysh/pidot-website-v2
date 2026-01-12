@@ -177,6 +177,30 @@ export default function DeveloperExperienceUI() {
               strokeOpacity="0.5"
               strokeLinecap="round"
             />
+            <rect 
+            fill="currentColor" 
+            height="1.07692" 
+            rx="0.5"  
+            width="1.07692" 
+            x="11.4615" 
+            y="7.9231">
+            </rect>
+            <rect 
+            fill="currentColor" 
+            height="1.07692" 
+            rx="0.5" 
+            width="1.07692" 
+            x="12.5385" 
+            y="3.0769">
+            </rect>
+            <rect 
+            fill="currentColor" 
+            height="1.07692" 
+            rx="0.5" 
+            width="1.07692" 
+            x="9.84613" 
+            y="0.923096">
+            </rect>
           </svg>
 
           {/* Title */}

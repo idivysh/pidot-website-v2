@@ -4,6 +4,7 @@ import TrustedBySection from '@/features/pagedemo/sections/TrustedBySection';
 import IntegrateMorningSection from '@/features/pagedemo/sections/IntegrateMorningSection';
 import DeveloperExperienceSection from '@/features/pagedemo/sections/DeveloperExperienceSection';
 import EditorSection from '@/features/pagedemo/sections/EditorSection';
+import GoBeyondEditingSection from '@/features/pagedemo/sections/GoBeyondEditingSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <IntegrateMorningSection />
       <DeveloperExperienceSection />
       <EditorSection />
+      <GoBeyondEditingSection />
     </main>
   );
 }
