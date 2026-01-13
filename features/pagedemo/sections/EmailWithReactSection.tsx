@@ -48,7 +48,7 @@ export default function EmailWithReactSection() {
                 after:absolute after:top-[-2px] after:left-[-2px]
                 after:w-[calc(100%+4px)] after:h-[calc(100%+4px)]
                 after:rounded-[1rem]
-                after:bg-[url('/static/texture-btn.png')]
+                after:bg-[url('/pagedemo/texture-btn.png')]
                 after:bg-repeat after:pointer-events-none
             "
             >

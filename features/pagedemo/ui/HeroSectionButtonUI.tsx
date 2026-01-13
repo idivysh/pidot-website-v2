@@ -7,7 +7,7 @@ type Props = {
 
 export default function Button({ children, variant = "primary" }: Props) {
   const base =
-    "inline-flex items-center rounded-full px-6 py-3 text-sm font-medium transition";
+    "inline-flex items-center rounded-2xl px-6 py-3 text-sm font-medium transition";
 
   const variants = {
     primary:

@@ -164,7 +164,7 @@ function Navbar({ className }: { className?: string }) {
                        rounded-none shadow-lg p-5 flex flex-col md:hidden"
           >
             <MobileDropdown
-              title="Products"
+              title="institutions"
               isOpen={openMenu === "Institutions"}
               toggle={() => toggleSubMenu("Institutions")}
               items={[
@@ -189,9 +189,10 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "About"}
               toggle={() => toggleSubMenu("About")}
               items={[
-                      { label: "Our Team", href: "/team" },
-                      { label: "Mission", href: "/mission" },
-                      { label: "Vision", href: "/vision" },
+                      { label: "About Us", href: "/about-us" },
+                      { label: "Leadership", href: "/leadership" },
+                      { label: "Our Story", href: "/our-story" },
+                      { label: "Contact", href: "/contact" },
                     ]}
             />
 
@@ -201,8 +202,8 @@ function Navbar({ className }: { className?: string }) {
               toggle={() => toggleSubMenu("Career")}
               items={[
                       { label: "Life at PI DOT", href: "/team" },
-                      { label: "Careers", href: "/careers" },
-                      { label: "Contact us", href: "/careers" },
+                      { label: "Join Our Team", href: "/careers" },
+                      { label: "Support", href: "/careers" },
                     ]}
             />
 
@@ -212,7 +213,10 @@ function Navbar({ className }: { className?: string }) {
               toggle={() => toggleSubMenu("Blog")}
               items={[
                       { label: "Our Blog", href: "/team" },
-                      { label: "Press Note", href: "/careers" },
+                      { label: "Case Studies", href: "/careers" },
+                      { label: "Press & Media", href: "/careers" },
+                      { label: "Research Papers", href: "/careers" },
+                      { label: "Community & Events", href: "/careers" },
                     ]}
             />
           </motion.div>
