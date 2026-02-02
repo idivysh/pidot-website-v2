@@ -169,7 +169,7 @@ export const InfiniteMovingCards = ({
       className="relative w-full flex flex-col items-center"
     >
       {mode === "manual" && (
-        <div className="relative w-full mt-4 max-w-7xl">
+        <div className="relative w-full mt-4 max-w-full">
           {!isMobile && (
             <button
               onClick={scrollLeft}
@@ -214,7 +214,7 @@ export const InfiniteMovingCards = ({
         <div
           ref={containerRef}
           className={cn(
-            "scroller relative max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] mt-4",
+            "scroller relative max-w-full overflow-hidden mt-4",
             className
           )}
         >
@@ -290,7 +290,7 @@ const HoverCard = ({ item, index, activeIndex, onTouch, manual }: any) => {
       className={cn(
         "group relative w-[230px] sm:w-[260px] md:w-[300px]",
         "h-[420px] sm:h-[460px] md:h-[500px]",
-        "rounded-2xl overflow-hidden bg-black dark:bg-white border border-gray-200 shadow-lg",
+        "rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-lg",
         // Hover ON for mobile + desktop (CSS hover remains for pointer devices that support it)
         "transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
         isActive && "-translate-y-1 shadow-xl",
@@ -321,12 +321,12 @@ const HoverCard = ({ item, index, activeIndex, onTouch, manual }: any) => {
         </div>
       </div>
 
-      <div className="h-[55%] p-6 flex flex-col justify-between text-white dark:text-black">
+      <div className="h-[55%] p-6 flex flex-col justify-between text-black">
         <div>
-          <h2 className="text-sm sm:text-base font-bold mb-2 dark:text-gray-900">
+          <h2 className="text-sm sm:text-base font-bold mb-2 text-gray-900">
             {item.title}
           </h2>
-          <p className="text-xs sm:text-sm text-white/70 dark:text-gray-600 leading-relaxed line-clamp-4">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-4">
             {item.quote}
           </p>
         </div>
@@ -343,7 +343,7 @@ const HoverCard = ({ item, index, activeIndex, onTouch, manual }: any) => {
               px-5 py-2
               rounded-full
               text-xs sm:text-sm font-medium
-              bg-white text-black dark:bg-black dark:text-white
+              bg-black text-white
               transition-transform duration-300
               hover:scale-105
               active:scale-95

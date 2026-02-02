@@ -1,31 +1,25 @@
 @import "tailwindcss";
-@import "@radix-ui/colors/slate.css";
 @import "@radix-ui/colors/slate-dark.css";
 
-
-
+/* ----------------------------------
+   Force Dark Theme (Global)
+----------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --slate-1: var(--slate-1);
-  --slate-2: var(--slate-2);
-  --slate-3: var(--slate-3);
-  --slate-4: var(--slate-4);
-  --slate-5: var(--slate-5);
-  --slate-6: var(--slate-6);
-  --slate-7: var(--slate-7);
-  --slate-8: var(--slate-8);
-  --slate-9: var(--slate-9);
-  --slate-10: var(--slate-10);
-  --slate-11: var(--slate-11);
-  --slate-12: var(--slate-12);
+  color-scheme: dark;
+
+  /* Always-dark tokens */
+  --background: #000000;
+  --foreground: #ededed;
 }
 
+/* ----------------------------------
+   Tailwind theme bridge
+----------------------------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* 👇 use Poppins as the main brand font */
+  /* Brand font */
   --font-sans: var(--font-poppins);
 
   --animate-scroll: scroll var(--animation-duration, 40s)
@@ -38,13 +32,10 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ededed;
-  }
-}
-
+/* ----------------------------------
+   Base styles
+----------------------------------- */
+html,
 body {
   background: var(--background);
   color: var(--foreground);

@@ -395,14 +395,14 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
     ];
 
   return (
-    <section className="relative w-full flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-black">
+    <section className="flex h-full flex-col items-center justify-between md:flex-row md:pb-5">
       {/* === Text Section === */}
-      <div className="max-w-7xl mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20 ">
+      <div className="w-full mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20 ">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-2xl md:text-4xl font-bold text-black dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-white"
         >
           Enterprise Hiring Redefined
         </motion.h2>
@@ -410,7 +410,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-3 mx-auto"
+          className="text-base md:text-xl font-normal text-neutral-200 max-w-md mt-3 mx-auto"
         >
           AI Powered Simulation Software for Hiring Global Teams.
         </motion.p>
@@ -419,13 +419,13 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       {/* === Globe Section (Outside Container) === */}
       <div className="relative w-full flex justify-center items-center z-10">
         {/* 🔥 Increased Globe Height */}
-        <div className="w-full h-[380px] sm:h-[480px] md:h-[650px] lg:h-[720px]">
+        <div className="w-full h-[380px] sm:h-[380px] md:h-[450px] lg:h-[720px]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
 
       {/* === Bottom Gradient Overlay === */}
-      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-b from-transparent dark:to-black to-white pointer-events-none" />
+      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-b from-transparent to-black pointer-events-none" />
     </section>
   );
 }

@@ -11,6 +11,12 @@ import { HeroHighlightDemo1 } from "@/components/sections/hero-highlight-1";
 import { LayoutGridDemo } from "@/components/sections/layout-grid"
 import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-effect"
 import { InfiniteMovingCardsDemo } from "@/components/sections/infinite-moving-cards"
+import TrustedBySection from '@/components/sections/TrustedBySection';
+import EverythingInYourControlSection from '@/components/sections/EverythingInYourControlSection';
+import GoBeyondEditingSection from '@/components/sections/GoBeyondEditingSection';
+import TestimonialSection from "@/components/sections/TestimonialSection";
+import PiDotGlow from "@/components/sections/pi-dot-glow";
+
 // import { ScrollScene } from "@/components/sections/scroll-pinned-section"
 
 export default function Home() {
@@ -60,34 +66,48 @@ export default function Home() {
           isBannerOpen ? "pt-24" : "pt-10"
         }`}
       >
-        <section className="max-w-6xl mx-auto px-6 text-center">
+        <section className="max-w-full mx-auto px-6 text-center">
           <GlobeDemo />
         </section>
 
         <div>
           <InfiniteMovingCardsDemo />
         </div>
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <HeroHighlightDemo />
-        </div>
-        <div className="ms:p-30 md:p-30 p-15">
+        </div> */}
+        <TrustedBySection />
+        {/* <div className="ms:p-30 md:p-30 p-15">
           <GlowingEffectDemo />
-        </div>
-        <div>
+        </div> */}
+        <EverythingInYourControlSection />
+        {/* <div>
           <HeroHighlightDemo1 />
         </div>
         <div>
           <LayoutGridDemo />
-        </div>
+        </div> */}
+        <GoBeyondEditingSection />
         <div className="mt-5">
           <TypewriterEffectSmoothDemo />
         </div>
       </div>
+      <div className="mt-10">
+        <TestimonialSection />
+      </div>
+      <div className="relative min-h-screen flex flex-col bg-black">
 
-      {/* Footer at bottom */}
-      <div className="mt-auto">
+      {/* Glow BACKGROUND */}
+      <div className="absolute inset-0 z-0">
+        <PiDotGlow />
+      </div>
+
+      {/* Footer ON TOP */}
+      <div className="relative z-10 mt-75">
         <FooterDemo />
       </div>
+
+    </div>
     </main>
   );
 }

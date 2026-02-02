@@ -65,7 +65,7 @@ export const FooterIcon: React.FC<FooterIconProps> = ({ Icon, href }) => (
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-[#0B0E14] text-gray-300">
+    <footer className="w-full  text-gray-300">
 
       {/* Main Footer */}
       <div className="mx-auto w-full max-w-7xl px-6 py-12">
@@ -82,13 +82,13 @@ export const Footer = () => {
           >
             <div className="flex items-center gap-2">
               <Image
-                src="/assets/PiDot/Logomark/SVG/White.svg"
+                src="assets/PiDot/Logomark/SVG/Regular.svg"
                 alt="Pi Dot Logomark"
                 width={32}
                 height={32}
               />
               <Image
-                src="/assets/PiDot/Wordmark/SVG/White.svg"
+                src="assets/PiDot/Wordmark/SVG/Pi_Dot_Mustard__3_-removebg-preview.svg"
                 alt="Pi Dot Wordmark"
                 width={100}
                 height={32}

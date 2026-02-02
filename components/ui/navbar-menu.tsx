@@ -35,7 +35,7 @@ export const MenuItem = ({
     >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black dark:text-white hover:opacity-90"
+        className="cursor-pointer text-white hover:opacity-90"
       >
         {item}
       </motion.p>
@@ -50,7 +50,7 @@ export const MenuItem = ({
           <motion.div
             layoutId="active"
             transition={spring}
-            className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+            className="bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl"
           >
             <motion.div layout className="w-max h-full p-4">
               {children}
@@ -100,10 +100,10 @@ export const ProductItem = ({
         className="shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-lg font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-lg font-bold mb-1 text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-xs max-w-[10rem] dark:text-neutral-300">
+        <p className=" text-xs max-w-[10rem] text-neutral-300">
           {description}
         </p>
       </div>
@@ -115,7 +115,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <a
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white"
+      className="text-neutral-200 hover:text-white"
     >
       {children}
     </a>

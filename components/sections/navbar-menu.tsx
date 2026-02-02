@@ -34,10 +34,10 @@ function Navbar({ className }: { className?: string }) {
         onMouseLeave={() => setActive(null)}
         className="
           w-full flex items-center justify-between 
-          border border-black/10 dark:border-white/10
-          bg-white/75 dark:bg-black/60
+          border border-white/10
+          bbg-black/60
           backdrop-blur-sm
-          bg-gradient-to-b from-white/75 to-white/60 dark:from-black/60 dark:to-black/50
+          bg-gradient-to-b from-black/60 to-black/50
           shadow-md px-10 py-5
         "
 
@@ -50,14 +50,14 @@ function Navbar({ className }: { className?: string }) {
             width={40}
             height={40}
             alt="Logo Mark"
-            // className="invert dark:invert-0"
+            // className="invert-0"
           />
           <img
             src={"assets/PiDot/Wordmark/SVG/Pi_Dot_Mustard__3_-removebg-preview.svg"}
             width={100}
             height={50}
             alt="Word Mark"
-            // className="invert dark:invert-0"
+            // className="invert-0"
           />
         </div>
 
@@ -145,9 +145,9 @@ function Navbar({ className }: { className?: string }) {
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? (
-            <X className="w-6 h-6 text-black dark:text-white" />
+            <X className="w-6 h-6 text-white" />
           ) : (
-            <Menu className="w-6 h-6 text-black dark:text-white" />
+            <Menu className="w-6 h-6 text-white" />
           )}
         </button>
       </nav>
@@ -160,7 +160,7 @@ function Navbar({ className }: { className?: string }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-[85px] w-full bg-white dark:bg-black border border-black/10 dark:border-white/10 
+            className="absolute top-[85px] w-full bg-black border border-white/10 
                        rounded-none shadow-lg p-5 flex flex-col md:hidden"
           >
             <MobileDropdown
@@ -238,10 +238,10 @@ function MobileDropdown({
   items: { label: string; href: string }[];
 }) {
   return (
-    <div className="border-b border-black/10 dark:border-white/10 py-2">
+    <div className="border-b border-white/10 py-2">
       <button
         onClick={toggle}
-        className="w-full flex justify-between items-center text-lg text-black dark:text-white"
+        className="w-full flex justify-between items-center text-lg text-white"
       >
         {title}
         <ChevronDown
@@ -262,7 +262,7 @@ function MobileDropdown({
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                className="text-sm text-neutral-300 hover:text-white"
               >
                 {item.label}
               </a>
