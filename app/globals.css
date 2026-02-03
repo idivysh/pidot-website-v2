@@ -32,6 +32,14 @@
   }
 }
 
+/* Disable globe interaction ONLY on touch devices */
+@media (pointer: coarse) {
+  .globe-canvas {
+    pointer-events: none;
+    touch-action: auto;
+  }
+}
+
 /* ----------------------------------
    Base styles
 ----------------------------------- */
