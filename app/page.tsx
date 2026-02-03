@@ -66,7 +66,7 @@ export default function Home() {
           isBannerOpen ? "pt-24" : "pt-10"
         }`}
       >
-        <section className="max-w-full mx-auto px-6 text-center">
+        <section className="max-w-full mx-auto px-6 text-center sm:mt-0 mt-20">
           <GlobeDemo />
         </section>
 

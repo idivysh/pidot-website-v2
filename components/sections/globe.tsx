@@ -395,9 +395,9 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
     ];
 
   return (
-    <section className="flex h-full flex-col items-center justify-between md:flex-row md:pb-5">
+    <section className="relative flex flex-col md:flex-row lg:min-h-screen items-center justify-between md:flex-row md:pb-5">
       {/* === Text Section === */}
-      <div className="w-full mx-auto text-center px-4 ms:mt-10 mt-20 mb-0 z-20 ">
+      <div className="w-full mx-auto text-center px-4 ms:mt-10 z-20">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -419,7 +419,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       {/* === Globe Section (Outside Container) === */}
       <div className="relative w-full flex justify-center items-center z-10">
         {/* 🔥 Increased Globe Height */}
-        <div className="w-full h-[380px] sm:h-[380px] md:h-[450px] lg:h-[720px]">
+        <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[600px] -mt-6 md:-mt-10 lg:mt-0">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
