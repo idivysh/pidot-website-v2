@@ -15,7 +15,7 @@ export function TypewriterEffectSmoothDemo() {
 
   return (
     <div className="flex flex-col items-center justify-center h-[10rem]">
-      <p className="text-neutral-200 text-xs sm:text-base mb-2">
+      <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center">
         Ready to Rethink Hiring, Talent Training, and Workforce Readiness?
       </p>
 

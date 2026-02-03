@@ -402,7 +402,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-bold text-white"
+          className="font-display effect-font-styling effect-font-gradient sm:text-left text-center mb-2 sm:px-5 md:px-10 lg:px-20 text-[3rem] leading-[120%] tracking-tighter md:text-[3.5rem]"
         >
           Enterprise Hiring Redefined
         </motion.h2>
@@ -410,7 +410,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-base md:text-xl font-normal text-neutral-200 max-w-md mt-3 mx-auto"
+          className="text-base md:text-[1.125rem] md:leading-[1.5] sm:text-left text-center text-white/60 font-normal text-balance mb-8 md:mb-16 sm:px-5 md:px-10 lg:px-20"
         >
           AI Powered Simulation Software for Hiring Global Teams.
         </motion.p>
@@ -419,7 +419,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
       {/* === Globe Section (Outside Container) === */}
       <div className="relative w-full flex justify-center items-center z-10">
         {/* 🔥 Increased Globe Height */}
-        <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[600px] -mt-6 md:-mt-10 lg:mt-0">
+        <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[550px] -mt-6 md:-mt-10 lg:mt-0">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

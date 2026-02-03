@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+
+      fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"],
+      },
+
       colors: {
         slate: {
           1: "var(--slate-1)",

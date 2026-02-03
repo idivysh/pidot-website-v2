@@ -11,11 +11,11 @@ export default function EverythingInYourControlSection() {
           playsInline
           width={170}
           height={170}
-          poster="/static/landing-page/3d-control-fallback.jpg"
+          poster="/assets/3d-control-fallback.jpg"
           className="mx-auto mb-4"
         >
           <source
-            src="/pagedemo/3d-control.mp4"
+            src="/assets/3d-control.mp4"
             type="video/mp4"
           />
         </video>

@@ -250,7 +250,6 @@ export function World(props: WorldProps) {
   scene.fog = new Fog(0xffffff, 400, 2000);
   return (
     <Canvas
-      className="globe-canvas"
       scene={scene}
       camera={{ fov: 50, position: [0, 0, 300], near: 180, far: 1800 }}
     >

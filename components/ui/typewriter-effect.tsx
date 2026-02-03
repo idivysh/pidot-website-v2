@@ -56,7 +56,7 @@ export const TypewriterEffectSmooth = ({
       >
         {/* ✅ Increased font size for mobile */}
         <div
-          className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
+          className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-display"
           style={{ whiteSpace: "nowrap" }}
         >
           {renderWords()}

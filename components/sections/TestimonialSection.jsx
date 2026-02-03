@@ -42,7 +42,7 @@ export default function TestimonialSection() {
 
       {/* Quote */}
       <blockquote className="mx-auto max-w-[520px] text-center">
-        <span className="text-[1.5rem] leading-[1.5] font-medium text-gray-200">
+        <span className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center mb-8 md:mb-16">
           Resend is transforming email for developers. Simple interface, easy
           integrations, handy templates. What else could we ask for.
         </span>
@@ -58,10 +58,10 @@ export default function TestimonialSection() {
           className="rounded-full"
         />
         <div>
-          <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-gray-200">
+          <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white font-normal text-balance text-center">
             Guillermo Rauch
           </p>
-          <p className="text-sm leading-[1.6] text-gray-400">
+          <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center">
             CEO at Vercel
           </p>
         </div>

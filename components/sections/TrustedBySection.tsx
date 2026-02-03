@@ -42,7 +42,7 @@ export default function TrustedCompanies() {
       />
 
       {/* Text (FORCED 2 LINES) */}
-      <p className="mb-20 max-w-lg text-center text-base md:text-[1.125rem] md:leading-[1.5] text-white/70">
+      <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center mb-8 md:mb-16">
         Companies of all sizes trust Resend <br />
         to deliver their most important emails.
       </p>

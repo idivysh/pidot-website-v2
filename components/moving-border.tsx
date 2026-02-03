@@ -116,7 +116,7 @@ export default function MovingBorder({
           <div
             className="
               h-24 w-24
-              bg-[radial-gradient(circle,#22c55e_35%,transparent_70%)]
+              bg-[radial-gradient(circle,#f69507_35%,transparent_70%)]
               blur-[2px]
             "
           />

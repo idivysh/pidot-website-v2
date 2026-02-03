@@ -33,7 +33,7 @@ const [activeTab, setActiveTab] = useState(1);
         >
             <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
             <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
-            <div className="align-center border-white/30 text-white group-data-[state=active]:text-green-9 relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
                 <div className="relative flex h-full w-full items-center justify-center">
                 <div style={{ width: 18, height: 18 }}
                      className="analytics-icon"
@@ -172,7 +172,7 @@ const [activeTab, setActiveTab] = useState(1);
 
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-green-400"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
                 />
                 </div>
             </div>
@@ -183,11 +183,6 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             </span>
-
-            <span
-            aria-hidden="true"
-            className="absolute inset-0 z-0 scale-x-[1.5] blur-xs group-data-[state=active]:before:absolute group-data-[state=active]:before:from-0% group-data-[state=active]:before:inset-0 group-data-[state=active]:before:top-1/2 group-data-[state=active]:before:w-[400px] group-data-[state=active]:before:animate-disco-border group-data-[state=active]:before:bg-conic group-data-[state=active]:before:from-green-11 group-data-[state=active]:before:via-transparent group-data-[state=active]:before:to-transparent"
-            />
             
             {activeTab === 1 && (
             <div className="pointer-events-none absolute inset-0 z-[1] rounded-2xl">
@@ -214,7 +209,7 @@ const [activeTab, setActiveTab] = useState(1);
         >
             <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
             <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
-            <div className="align-center border-white/30 text-white group-data-[state=active]:text-green-9 relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
                 <div className="relative flex h-full w-full items-center justify-center">
                 <div style={{ width: 18, height: 18 }}>
                     <svg
@@ -341,7 +336,7 @@ const [activeTab, setActiveTab] = useState(1);
 
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-green-400"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
                 />
                 </div>
             </div>
@@ -377,7 +372,7 @@ const [activeTab, setActiveTab] = useState(1);
         >
             <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
             <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
-            <div className="align-center border-white/30 text-white group-data-[state=active]:text-green-9 relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
                 <div className="relative flex h-full w-full items-center justify-center">
                 <div style={{ width: 18, height: 18 }}>
                     <svg
@@ -545,7 +540,7 @@ const [activeTab, setActiveTab] = useState(1);
 
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-green-400"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
                 />
                 </div>
             </div>
@@ -581,7 +576,7 @@ const [activeTab, setActiveTab] = useState(1);
         >
             <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
             <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
-            <div className="align-center border-white/30 text-white group-data-[state=active]:text-green-9 relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
                 <div className="relative flex h-full w-full items-center justify-center">
                 <div style={{ width: 18, height: 18 }}>
                     <svg
@@ -749,7 +744,7 @@ const [activeTab, setActiveTab] = useState(1);
 
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-green-400"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
                 />
                 </div>
             </div>
@@ -785,7 +780,7 @@ const [activeTab, setActiveTab] = useState(1);
         >
             <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
             <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
-            <div className="align-center border-white/30 text-white group-data-[state=active]:text-green-9 relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
                 <div className="relative flex h-full w-full items-center justify-center">
                 <div style={{ width: 18, height: 18 }}>
                     <svg
@@ -953,7 +948,7 @@ const [activeTab, setActiveTab] = useState(1);
 
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-green-400"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
                 />
                 </div>
             </div>
