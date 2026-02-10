@@ -7,7 +7,7 @@ const logos = [
   { src: "/logos/Unschool.png", alt: "Unschool" },
   { src: "/logos/SolarBull.png", alt: "SolarBull" },
   { src: "/logos/Naredco.png", alt: "Naredco" },
-  { src: "/logos/aiesec.svg", alt: "Aiesec" },
+  { src: "/logos/aiesec.svg", alt: "Aiesec", invert: true },
   { src: "/logos/3DM.png", alt: "3DM" },
   { src: "/logos/vvism.png", alt: "Vvism" },
   { src: "/logos/loyola.png", alt: "Loyola" },

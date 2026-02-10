@@ -7,19 +7,16 @@ type LogoProps = {
 
 export default function Logo({ src, alt }: LogoProps) {
   return (
-    <div
-      className="
-        flex items-center justify-center
-        transition-all duration-300 ease-out
-
-      "
-    >
+    <div className="flex items-center justify-center transition-all duration-300 ease-out">
       <Image
         src={src}
         alt={alt}
         width={140}
         height={40}
-        className="max-h-8 w-auto object-contain"
+        className={`
+          max-h-8 w-auto object-contain
+          ${alt.toLowerCase() === "aiesec" ? "invert" : ""}
+        `}
       />
     </div>
   );
