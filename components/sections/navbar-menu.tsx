@@ -104,37 +104,40 @@ function Navbar({ className }: { className?: string }) {
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="About">
-              <div className="flex flex-col space-y-4 text-sm">
+            {/* <MenuItem setActive={setActive} active={active} item="About"> */}
+              {/* <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">About Us</HoveredLink>
                 <HoveredLink href="/interface-design">Leadership</HoveredLink>
                 <HoveredLink href="/seo">Our Story</HoveredLink>
                 <HoveredLink href="/seo">Contact</HoveredLink>
-              </div>
-            </MenuItem>
+              </div> */}
+              <HoveredLink href="#">About</HoveredLink>
+            {/* </MenuItem> */}
 
-            <MenuItem setActive={setActive} active={active} item="Career">
+            {/* <MenuItem setActive={setActive} active={active} item="Career">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Life at PI DOT</HoveredLink>
                 <HoveredLink href="/interface-design">Join our Team</HoveredLink>
                 <HoveredLink href="/seo">Support</HoveredLink>
-              </div>
-            </MenuItem>
+              </div> */}
+              <HoveredLink href="#">Career</HoveredLink>
+            {/* </MenuItem> */}
 
 
-            <MenuItem setActive={setActive} active={active} item="Blog">
+            {/* <MenuItem setActive={setActive} active={active} item="Blog">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Our Blog</HoveredLink>
                 <HoveredLink href="/web-dev">Case Studies</HoveredLink>
                 <HoveredLink href="/web-dev">Press & Media</HoveredLink>
                 <HoveredLink href="/web-dev">Research Papers</HoveredLink>
                 <HoveredLink href="/web-dev">Community & Events</HoveredLink>
-              </div>
-            </MenuItem>
+              </div> */}
+              <HoveredLink href="#">Blog</HoveredLink>
+            {/* </MenuItem> */}
 
-            <MenuItem setActive={setActive} active={active} item="Beta">
-                <HoveredLink href="/pagedemo">PageDemo</HoveredLink>
-            </MenuItem>
+            {/* <MenuItem setActive={setActive} active={active} item="Beta"> */}
+                <HoveredLink href="/pagedemo1">Beta</HoveredLink>
+            {/* </MenuItem> */}
 
           </div>
         </div>

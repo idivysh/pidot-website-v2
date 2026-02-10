@@ -18,7 +18,7 @@ const blogCards = [
     quote:
       "Where leadership, decision-making, and AI converge to train the next generation of Thinkers.",
     date: "August 2025",
-    image: "/assets/InfiniteCardImages/image1.png",
+    image: "/assets/InfiniteCardImages/img1.png",
     link: "/blog/corporate-simulation",
   },
   {
@@ -27,7 +27,7 @@ const blogCards = [
     quote:
       "Built by Fermion AI Labs — benchmarked to outperform ChatGPT in mathematical reasoning and logic.",
     date: "November 2025",
-    image: "/assets/InfiniteCardImages/image2.png",
+    image: "/assets/InfiniteCardImages/img2.png",
     link: "/blog/llm-math",
   },
   {
@@ -36,8 +36,7 @@ const blogCards = [
     quote:
       "CSP mirrors the pulse of corporate life — decisions, dilemmas, and real consequence.",
     date: "September 2025",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80",
+    image: "/assets/InfiniteCardImages/img3.png",
     link: "/blog/simulation",
   },
   {
@@ -46,7 +45,7 @@ const blogCards = [
     quote:
       "CSP’s structured learning path transforms students into industry-ready professionals.",
     date: "September 2025",
-    image: "/assets/InfiniteCardImages/image4.png",
+    image: "/assets/InfiniteCardImages/img4.png",
     link: "/blog/campus-to-corporate",
   },
   {
@@ -55,8 +54,7 @@ const blogCards = [
     quote:
       "Fermion AI Labs is where builders and engineers learn to shape intelligence.",
     date: "July 2025",
-    image:
-      "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=500&q=80",
+    image: "/assets/InfiniteCardImages/img5.png",
     link: "/blog/ai-community",
   },
   {
@@ -65,7 +63,7 @@ const blogCards = [
     quote:
       "PI DOT’s adaptive intelligence crafts personalized simulation paths.",
     date: "November 2025",
-    image: "/assets/InfiniteCardImages/image6.png",
+    image: "/assets/InfiniteCardImages/img6.png",
     link: "/blog/pi-dot-ai",
   },
 ];

@@ -25,9 +25,9 @@ export default function EverythingInYourControlSection() {
         </h2>
 
         <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center mb-8 md:mb-16">
-          All the features you need to manage your email sending, troubleshoot with
+          From role requirements to final shortlist, you define how candidates are tested,
           <br />
-          detailed logs, and protect your domain reputation – without the friction.
+          evaluated, and selected — in an environment that mirrors your real business.
         </p>
       </div>
         <EverythingInYourControlUI />

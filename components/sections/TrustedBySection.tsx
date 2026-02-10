@@ -3,18 +3,18 @@
 import Logo from "../ui/TrustedSectionLogoUI";
 
 const logos = [
-  { src: "/logos/warnerbros.svg", alt: "Warner Bros" },
-  { src: "/logos/max.svg", alt: "Max" },
-  { src: "/logos/raycast.svg", alt: "Raycast" },
-  { src: "/logos/mistral.svg", alt: "Mistral AI" },
-  { src: "/logos/on.svg", alt: "On" },
-  { src: "/logos/anghami.svg", alt: "Anghami" },
-  { src: "/logos/gumroad.svg", alt: "Gumroad" },
-  { src: "/logos/fal.svg", alt: "Fal" },
-  { src: "/logos/decathlon.svg", alt: "Decathlon" },
-  { src: "/logos/supabase.svg", alt: "Supabase" },
-  { src: "/logos/leap.svg", alt: "Leap" },
-  { src: "/logos/payload.svg", alt: "Payload" },
+  { src: "/logos/t-hub.png", alt: "t-hub" },
+  { src: "/logos/Unschool.png", alt: "Unschool" },
+  { src: "/logos/SolarBull.png", alt: "SolarBull" },
+  { src: "/logos/Naredco.png", alt: "Naredco" },
+  { src: "/logos/aiesec.svg", alt: "Aiesec" },
+  { src: "/logos/3DM.png", alt: "3DM" },
+  { src: "/logos/vvism.png", alt: "Vvism" },
+  { src: "/logos/loyola.png", alt: "Loyola" },
+  { src: "/logos/Woxsen.png", alt: "Woxsen" },
+  { src: "/logos/mlrit.png", alt: "Mlrit" },
+  { src: "/logos/Avinash.png", alt: "Avinash" },
+  { src: "/logos/VIT.png", alt: "VIT" },
 ];
 
 export default function TrustedCompanies() {
@@ -43,8 +43,8 @@ export default function TrustedCompanies() {
 
       {/* Text (FORCED 2 LINES) */}
       <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 font-normal text-balance text-center mb-8 md:mb-16">
-        Companies of all sizes trust Resend <br />
-        to deliver their most important emails.
+        Leading institutions & Companies trust Corporate Simulation to <br />
+        prepare students for the challenges of the modern corporate world.
       </p>
 
       {/* Logos Grid – 2 Rows */}

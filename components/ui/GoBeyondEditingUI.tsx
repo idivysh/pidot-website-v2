@@ -103,12 +103,11 @@ export default function GoBeyondEditingUI() {
                     />
                 </svg>
             <h2 className="font-display text-xl leading-[130%] text-white">
-                Contact Management
+                Simulation-Led Training & Hiring
             </h2>
 
             <p className="text-sm leading-[1.6] text-white/50">
-                Import your list in minutes, regardless the size of your audience.
-                Get full visibility of each contact and their personal attributes.
+                Assess and prepare candidates through role-specific simulations that reflect real business challenges.
             </p>
 
             <a
@@ -207,11 +206,11 @@ export default function GoBeyondEditingUI() {
                     />
                 </svg>
             <h2 className="font-display text-xl leading-[130%] text-white">
-                Broadcast Analytics
+                Hire the Right Candidate for You
             </h2>
 
             <p className="text-sm leading-[1.6] text-white/50">
-                Unlock powerful insights and understand exactly how your audience is interacting with your broadcast emails.
+                Identify candidates whose capabilities, approach, and execution style align with your organizational requirements.
             </p>
 
             <a
@@ -324,12 +323,11 @@ export default function GoBeyondEditingUI() {
                     />
                 </svg>
             <h2 className="font-display text-xl leading-[130%] text-white">
-                Contact Management
+                Enhance Efficiency of Existing Teams
             </h2>
 
             <p className="text-sm leading-[1.6] text-white/50">
-                Import your list in minutes, regardless the size of your audience.
-                Get full visibility of each contact and their personal attributes.
+                Leverage simulations to support employee upskilling, capability development, decision-making effectiveness, and operational readiness across teams.
             </p>
 
             <a
@@ -428,11 +426,11 @@ export default function GoBeyondEditingUI() {
                     />
                 </svg>
             <h2 className="font-display text-xl leading-[130%] text-white">
-                Broadcast Analytics
+                Personalized Simulations Crafted in Minutes
             </h2>
 
             <p className="text-sm leading-[1.6] text-white/50">
-                Unlock powerful insights and understand exactly how your audience is interacting with your broadcast emails.
+                Configure tailored simulations quickly, customized to your roles, workflows, and evaluation parameters.
             </p>
 
             <a

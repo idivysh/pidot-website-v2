@@ -24,8 +24,8 @@ const [activeTab, setActiveTab] = useState(1);
             aria-selected={activeTab === 1}
             data-state={activeTab === 1 ? "active" : "inactive"}
             onClick={() => setActiveTab(1)}
-            aria-controls="radix-_R_1dpbr9fstb_-content-Intuitive Analytics"
-            id="radix-_R_1dpbr9fstb_-trigger-Intuitive Analytics"
+            aria-controls="radix-_R_1dpbr9fstb_-content-Design the role before you hire"
+            id="radix-_R_1dpbr9fstb_-trigger-Design the role before you hire"
             tabIndex={-1}
             data-orientation="horizontal"
             data-radix-collection-item=""
@@ -178,7 +178,7 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
-                Intuitive Analytics
+                Design the role before you hire
             </h4>
             </div>
 
@@ -200,8 +200,8 @@ const [activeTab, setActiveTab] = useState(1);
             aria-selected={activeTab === 2}
             data-state={activeTab === 2 ? "active" : "inactive"}
             onClick={() => setActiveTab(2)}
-            aria-controls="radix-_R_1dpbr9fstb_-content-Full Visibility"
-            id="radix-_R_1dpbr9fstb_-trigger-Full Visibility"
+            aria-controls="radix-_R_1dpbr9fstb_-content-Simulate your business environment"
+            id="radix-_R_1dpbr9fstb_-trigger-Simulate your business environment"
             tabIndex={-1}
             data-orientation="horizontal"
             data-radix-collection-item=""
@@ -342,7 +342,7 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
-                Full Visibility
+                Simulate your business environment
             </h4>
             </div>
 
@@ -363,8 +363,8 @@ const [activeTab, setActiveTab] = useState(1);
             aria-selected={activeTab === 3}
             data-state={activeTab === 3 ? "active" : "inactive"}
             onClick={() => setActiveTab(3)}
-            aria-controls="radix-_R_1dpbr9fstb_-content-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
+            aria-controls="radix-_R_1dpbr9fstb_-content-Control evaluation criteria"
+            id="radix-_R_1dpbr9fstb_-trigger-Control evaluation criteria"
             tabIndex={-1}
             data-orientation="horizontal"
             data-radix-collection-item=""
@@ -546,7 +546,7 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
-                Domain Authentication
+                Control evaluation criteria
             </h4>
             </div>
 
@@ -567,8 +567,8 @@ const [activeTab, setActiveTab] = useState(1);
             aria-selected={activeTab === 4}
             data-state={activeTab === 4 ? "active" : "inactive"}
             onClick={() => setActiveTab(4)}
-            aria-controls="radix-_R_1dpbr9fstb_-content-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
+            aria-controls="radix-_R_1dpbr9fstb_-content-Watch candidates perform"
+            id="radix-_R_1dpbr9fstb_-trigger-Watch candidates perform"
             tabIndex={-1}
             data-orientation="horizontal"
             data-radix-collection-item=""
@@ -750,7 +750,7 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
-                Domain Authentication
+                Watch candidates perform
             </h4>
             </div>
 
@@ -771,8 +771,8 @@ const [activeTab, setActiveTab] = useState(1);
             aria-selected={activeTab === 5}
             data-state={activeTab === 5 ? "active" : "inactive"}
             onClick={() => setActiveTab(5)}
-            aria-controls="radix-_R_1dpbr9fstb_-content-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
+            aria-controls="radix-_R_1dpbr9fstb_-content-Shortlist using performance signals"
+            id="radix-_R_1dpbr9fstb_-trigger-Shortlist using performance signals"
             tabIndex={-1}
             data-orientation="horizontal"
             data-radix-collection-item=""
@@ -954,13 +954,217 @@ const [activeTab, setActiveTab] = useState(1);
             </div>
 
             <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
-                Domain Authentication
+                Shortlist using performance signals
             </h4>
             </div>
 
             </span>
 
             {activeTab === 5 && (
+            <div className="pointer-events-none absolute inset-0 z-[1] rounded-2xl">
+                <MovingBorder duration={3000} radius={28} />
+            </div>
+            )}
+
+        </button>
+
+        {/* ================= TAB 6 ================= */}
+        <button
+            type="button"
+            role="tab"
+            aria-selected={activeTab === 6}
+            data-state={activeTab === 6 ? "active" : "inactive"}
+            onClick={() => setActiveTab(6)}
+            aria-controls="radix-_R_1dpbr9fstb_-content-Hire your right candidate"
+            id="radix-_R_1dpbr9fstb_-trigger-Hire your right candidate"
+            tabIndex={-1}
+            data-orientation="horizontal"
+            data-radix-collection-item=""
+            className="group relative h-[3.75rem] overflow-hidden rounded-2xl border border-white/30 p-6 md:h-[5.625rem] outline-hidden focus-visible:ring-2 focus-visible:ring-white/30 data-[state='active']:border-white/30"
+        >
+            <span className="absolute inset-px z-10 grid place-items-center rounded-2xl bg-black group-data-[state=active]:bg-gradient-to-b group-data-[state=active]:from-white/[3%] group-data-[state=active]:via-white/[1%] group-data-[state=active]:to-black">
+            <div className="flex h-full w-full items-center gap-2 px-4 py-2 text-left md:gap-4 md:p-6">
+            <div className="align-center border-white/30 text-white group-data-[state=active]:text-[#f69507] relative flex h-10 w-10 justify-center overflow-hidden rounded-xl bg-gradient-to-bl from-white/[6%] p-2 transition-all duration-150 ease-in-out group-data-[state=active]:from-white/10 md:border">
+                <div className="relative flex h-full w-full items-center justify-center">
+                <div style={{ width: 18, height: 18 }}>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 500 500"
+                    width="500"
+                    height="500"
+                    preserveAspectRatio="xMidYMid meet"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        transform: 'translate3d(0px, 0px, 0px)',
+                        contentVisibility: 'visible',
+                    }}
+                    >
+                    <defs>
+                        <clipPath id="__lottie_element_46">
+                        <rect width="500" height="500" x="0" y="0" />
+                        </clipPath>
+                        <clipPath id="__lottie_element_49">
+                        <path d="M0,0 L500,0 L500,500 L0,500z" />
+                        </clipPath>
+                    </defs>
+
+                    <g clipPath="url(#__lottie_element_46)">
+                        <g
+                        clipPath="url(#__lottie_element_49)"
+                        transform="matrix(1,0,0,1,0,0)"
+                        opacity="1"
+                        style={{ display: 'block' }}
+                        >
+                        {/* ---- Outer circle ---- */}
+                        <g
+                            className="primary design"
+                            style={{ display: 'block' }}
+                            transform="matrix(1,0,0,1,250.00399780273438,250.0030059814453)"
+                            opacity="1"
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path
+                                className="primary"
+                                stroke="rgb(255,255,255)"
+                                strokeOpacity="1"
+                                strokeWidth="31.3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                fillOpacity="0"
+                                d="M192.70899963378906,0 C192.70899963378906,106.43000030517578 106.43000030517578,192.70899963378906 0,192.70899963378906 C-106.43000030517578,192.70899963378906 -192.70899963378906,106.43000030517578 -192.70899963378906,0 C-192.70899963378906,-106.43000030517578 -106.43000030517578,-192.70899963378906 0,-192.70899963378906 C106.43000030517578,-192.70899963378906 192.70899963378906,-106.43000030517578 192.70899963378906,0z"
+                            />
+                            </g>
+                        </g>
+
+                        {/* ---- Horizontal line ---- */}
+                        <g
+                            className="primary design"
+                            style={{ display: 'block' }}
+                            transform="matrix(1,0,0,1,250.00399780273438,250.0030059814453)"
+                            opacity="1"
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path
+                                className="primary"
+                                stroke="rgb(255,255,255)"
+                                strokeOpacity="1"
+                                strokeWidth="31.3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                fillOpacity="0"
+                                d="M-192.70899963378906,0 C-192.70899963378906,0 -106.00399780273438,0 2.996000051498413,0 C141.99600219726562,0 192.70899963378906,0 192.70899963378906,0"
+                            />
+                            </g>
+                        </g>
+
+                        {/* ---- Right arc ---- */}
+                        <g
+                            className="primary design"
+                            style={{ display: 'block' }}
+                            transform="matrix(1,0,0,1,0,0.001007080078125)"
+                            opacity="1"
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,202.5030059814453,250.00399780273438)">
+                            <path
+                                className="primary"
+                                stroke="rgb(255,255,255)"
+                                strokeOpacity="1"
+                                strokeWidth="31.3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                fillOpacity="0"
+                                d="M78.18621826171875,190.2521514892578 C184.46145629882812,171.99057006835938 240.4475555419922,85 240.4475555419922,0 C240.4475555419922,-85 184.46145629882812,-168.00015258789062 78.18621826171875,-190.99984741210938"
+                            />
+                            </g>
+                        </g>
+
+                        {/* ---- Inner arcs ---- */}
+                        <g
+                            className="primary design"
+                            style={{ display: 'block' }}
+                            transform="matrix(1,0,0,1,0,0.001007080078125)"
+                            opacity="1"
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,202.5030059814453,250.00399780273438)">
+                            <path
+                                className="primary"
+                                stroke="rgb(255,255,255)"
+                                strokeOpacity="1"
+                                strokeWidth="31.3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                fillOpacity="0"
+                                d="M75.47502136230469,190.62600708007812 C98.14456176757812,158.33399963378906 115.05220794677734,85 115.05220794677734,0 C115.05220794677734,-85 98.14456176757812,-158.33399963378906 75.47502136230469,-190.62600708007812"
+                            />
+                            </g>
+                        </g>
+
+                        <g
+                            className="primary design"
+                            style={{ display: 'block' }}
+                            transform="matrix(1,0,0,1,0,0.001007080078125)"
+                            opacity="1"
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,202.5030059814453,250.00399780273438)">
+                            <path
+                                className="primary"
+                                stroke="rgb(255,255,255)"
+                                strokeOpacity="1"
+                                strokeWidth="31.3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                fillOpacity="0"
+                                d="M20.20800018310547,190.62600708007812 C-3.5741844177246094,158.33963012695312 -20.257410049438477,85 -20.257410049438477,0 C-20.257410049438477,-85 -3.5747807025909424,-158.34002685546875 20.20800018310547,-190.62600708007812"
+                            />
+                            </g>
+                        </g>
+
+                        {/* ---- Filled version (hidden) ---- */}
+                        <g
+                            className="primary design"
+                            transform="matrix(1,0,0,1,250,250)"
+                            opacity="1"
+                            style={{ display: 'none' }}
+                        >
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path
+                                className="primary"
+                                fill="rgb(255,255,255)"
+                                fillOpacity="1"
+                                d="M0.004000000189989805,-208.3560028076172 C-114.88600158691406,-208.3560028076172 -208.3560028076172,-114.88700103759766 -208.3560028076172,0.003000000026077032 C-208.3560028076172,114.89299774169922 -114.88600158691406,208.36199951171875 0.004000000189989805,208.36199951171875 C114.89399719238281,208.36199951171875 208.36300659179688,114.89299774169922 208.36300659179688,0.003000000026077032 C208.36300659179688,-114.88700103759766 114.89399719238281,-208.3560028076172 0.004000000189989805,-208.3560028076172z"
+                            />
+                            </g>
+                        </g>
+
+                        {/* ---- Empty hidden group ---- */}
+                        <g className="primary design" style={{ display: 'none' }}>
+                            <g>
+                            <path className="primary" />
+                            </g>
+                        </g>
+                        </g>
+
+                    </g>
+                    </svg>
+                </div>
+
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-transparent mix-blend-darken group-data-[state=active]:bg-[#f69507]"
+                />
+                </div>
+            </div>
+
+            <h4 className="font-display effect-font-styling text-base tracking-tighter text-white">
+                Hire your right candidate
+            </h4>
+            </div>
+
+            </span>
+
+            {activeTab === 6 && (
             <div className="pointer-events-none absolute inset-0 z-[1] rounded-2xl">
                 <MovingBorder duration={3000} radius={28} />
             </div>
@@ -976,8 +1180,8 @@ const [activeTab, setActiveTab] = useState(1);
             data-state={activeTab === 1 ? "active" : "inactive"}
             data-orientation="horizontal"
             role="tabpanel"
-            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Intuitive Analytics"
-            id="radix-_R_1dpbr9fstb_-content-Intuitive Analytics"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Design the role before you hire"
+            id="radix-_R_1dpbr9fstb_-content-Design the role before you hire"
             tabIndex={0}
             className={`col-start-1 row-start-1 transition-all duration-500 ease-out
             ${
@@ -1006,8 +1210,8 @@ const [activeTab, setActiveTab] = useState(1);
             data-state={activeTab === 2 ? "active" : "inactive"}
             data-orientation="horizontal"
             role="tabpanel"
-            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Full Visibility"
-            id="radix-_R_1dpbr9fstb_-content-Full Visibility"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Simulate your business environment"
+            id="radix-_R_1dpbr9fstb_-content-Simulate your business environment"
             tabIndex={0}
             className={`col-start-1 row-start-1 transition-all duration-500 ease-out
             ${
@@ -1036,8 +1240,8 @@ const [activeTab, setActiveTab] = useState(1);
             data-state={activeTab === 3 ? "active" : "inactive"}
             data-orientation="horizontal"
             role="tabpanel"
-            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-content-Domain Authentication"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Control evaluation criteria"
+            id="radix-_R_1dpbr9fstb_-content-Control evaluation criteria"
             tabIndex={0}
             className={`col-start-1 row-start-1 transition-all duration-500 ease-out
             ${
@@ -1066,8 +1270,8 @@ const [activeTab, setActiveTab] = useState(1);
             data-state={activeTab === 4 ? "active" : "inactive"}
             data-orientation="horizontal"
             role="tabpanel"
-            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-content-Domain Authentication"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Watch candidates perform"
+            id="radix-_R_1dpbr9fstb_-content-Watch candidates perform"
             tabIndex={0}
             className={`col-start-1 row-start-1 transition-all duration-500 ease-out
             ${
@@ -1096,12 +1300,42 @@ const [activeTab, setActiveTab] = useState(1);
             data-state={activeTab === 5 ? "active" : "inactive"}
             data-orientation="horizontal"
             role="tabpanel"
-            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Domain Authentication"
-            id="radix-_R_1dpbr9fstb_-content-Domain Authentication"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Shortlist using performance signals"
+            id="radix-_R_1dpbr9fstb_-content-Shortlist using performance signals"
             tabIndex={0}
             className={`col-start-1 row-start-1 transition-all duration-500 ease-out
             ${
                 activeTab === 5
+                ? "opacity-100 translate-y-0 scale-[1]"
+                : "opacity-0 -translate-y-6 scale-[0.98] pointer-events-none"
+            }`}
+            >
+            <div style={{ opacity: 1, transform: 'none' }}>
+                <img
+                alt="Resend Dashboard - Overview"
+                src="/pagedemo/screenshot-domain.webp"
+                loading="lazy"
+                width={1232}
+                height={657}
+                decoding="async"
+                data-nimg="1"
+                className="w-full rounded-2xl border border-white/20"
+                style={{ color: 'transparent' }}
+                />
+            </div>
+            </div>
+
+            {/* ================= TAB PANEL 6 ================= */}
+            <div
+            data-state={activeTab === 6 ? "active" : "inactive"}
+            data-orientation="horizontal"
+            role="tabpanel"
+            aria-labelledby="radix-_R_1dpbr9fstb_-trigger-Hire your right candidate"
+            id="radix-_R_1dpbr9fstb_-content-Hire your right candidate"
+            tabIndex={0}
+            className={`col-start-1 row-start-1 transition-all duration-500 ease-out
+            ${
+                activeTab === 6
                 ? "opacity-100 translate-y-0 scale-[1]"
                 : "opacity-0 -translate-y-6 scale-[0.98] pointer-events-none"
             }`}

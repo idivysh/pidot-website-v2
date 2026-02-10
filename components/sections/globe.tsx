@@ -404,7 +404,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           transition={{ duration: 1 }}
           className="font-display effect-font-styling effect-font-gradient sm:text-left text-center mb-2 sm:px-5 md:px-10 lg:px-20 text-[3rem] leading-[120%] tracking-tighter md:text-[3.5rem]"
         >
-          Enterprise Hiring Redefined
+           Global Enterprise Hiring Redefined
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -412,7 +412,7 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-base md:text-[1.125rem] md:leading-[1.5] sm:text-left text-center text-white/60 font-normal text-balance mb-8 md:mb-16 sm:px-5 md:px-10 lg:px-20"
         >
-          AI Powered Simulation Software for Hiring Global Teams.
+          AI Powered Corporate Simulation Software for Hiring Global Teams.
         </motion.p>
       </div>
 
