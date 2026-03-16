@@ -137,8 +137,8 @@ export const Footer = () => {
               links={[
                 { label: "Privacy Policy", href: "/legal/privacy-policy" },
                 { label: "Terms of Service", href: "/legal/terms-of-service" },
-                { label: "Data Processing Agreement", href: "" },
-                { label: "Cookies & Compliance", href: "" },
+                { label: "Data Processing Agreement", href: "/legal/data-processing-agreement" },
+                { label: "Cookies & Compliance", href: "/legal/cookies-and-campliance" },
               ]}
             />
 

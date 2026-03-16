@@ -3,11 +3,25 @@
 import { NavbarDemo } from "@/components/sections/navbar-menu";
 import { FooterDemo } from "@/components/sections/footer";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+import PiDotGlow from "@/components/sections/pi-dot-glow";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 
 
 export default function PrivacyPolicy() {
   
   const [activeSection, setActiveSection] = useState("");
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   useEffect(() => {
   const sections = document.querySelectorAll("section");
@@ -33,8 +47,26 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      {/* Top Navigation */}
-      <NavbarDemo />
+      <StickyBanner
+        open={isBannerOpen}
+        setOpen={setIsBannerOpen}
+        className="bg-gradient-to-b from-[#d17c00] to-[#f69507]"
+      >
+        <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
+          Reach out to us to redefine hiring.{" "}
+          <a href="#" className="underline transition duration-200">
+            Contact us
+          </a>
+        </p>
+      </StickyBanner>
+
+      {/* Navbar */}
+      <motion.div
+        className="fixed top-10 sm:top-0 z-50 w-full flex justify-center"
+        animate={{ y: isBannerOpen ? 56 : 0 }}
+      >
+        <NavbarDemo />
+      </motion.div>
 
     <main className="mx-auto max-w-6xl px-6 py-16 grid lg:grid-cols-[1fr_250px] gap-16 mt-30 mb-30">
 
@@ -558,8 +590,15 @@ export default function PrivacyPolicy() {
 
 </main>
 
-    {/* Bottom Footer */}
-      <FooterDemo />
+    <section className="relative min-h-screen bg-black">
+                <div className="absolute inset-0 z-0">
+                  <PiDotGlow />
+                </div>
+        
+                <div className="relative z-10 mt-75">
+                  <FooterDemo />
+                </div>
+              </section>
     </>
   )
 }

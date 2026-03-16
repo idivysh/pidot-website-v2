@@ -68,7 +68,7 @@ function Navbar({ className }: { className?: string }) {
               <div className="  text-sm grid grid-cols-2 gap-10 p-4">
                   <ProductItem
                     title="Corporate Simulation"
-                    href="https://pidot.in"
+                    href="corporate-simulation"
                     src="https://assets.aceternity.com/demos/algochurn.webp"
                     description="Helps institutions to make their students corporate-ready"
                   />
@@ -77,12 +77,6 @@ function Navbar({ className }: { className?: string }) {
                     href="https://pidot.in"
                     src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
                     description="Research-first initiative to train students on AI, LLMs & global engineering standards"
-                  />
-                  <ProductItem
-                    title="Global Education for Schools"
-                    href="https://pidot.in"
-                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                    description="Help Schools deliver globally connected curriculam through experiential learning programs"
                   />
               </div>
             </MenuItem>
