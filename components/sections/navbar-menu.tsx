@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { MenuItem, HoveredLink, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export function NavbarDemo() {
   return (
@@ -62,79 +63,74 @@ function Navbar({ className }: { className?: string }) {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex justify-center flex-1">
-          <div className="flex space-x-5">
-            <MenuItem setActive={setActive} active={active} item="Institutions">
-              <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-                  <ProductItem
-                    title="Corporate Simulation"
-                    href="corporate-simulation"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Helps institutions to make their students corporate-ready"
-                  />
-                  <ProductItem
-                    title="Fermion AI Labs"
-                    href="https://pidot.in"
-                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                    description="Research-first initiative to train students on AI, LLMs & global engineering standards"
-                  />
+        <div className="hidden md:grid grid-cols-3 items-center flex-1">
+
+          {/* LEFT SPACE */}
+          <div />
+
+          {/* CENTER MENU */}
+          <div className="flex justify-center gap-5">
+
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Institutions"
+            >
+              <div className="text-sm grid grid-cols-2 gap-10 p-4">
+                <ProductItem
+                  title="Corporate Simulation"
+                  href="corporate-simulation"
+                  src="https://assets.aceternity.com/demos/algochurn.webp"
+                  description="Helps institutions to make their students corporate-ready"
+                />
+
+                <ProductItem
+                  title="Fermion AI Labs"
+                  href="https://pidot.in"
+                  src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                  description="Research-first initiative to train students on AI, LLMs & global engineering standards"
+                />
               </div>
             </MenuItem>
 
-            <MenuItem setActive={setActive} active={active} item="Enterprise">
-              <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-                  <ProductItem
-                    title="Hiring Simulation"
-                    href="https://pidot.in"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Helps institutions to make their students corporate-ready"
-                  />
-                  <ProductItem
-                    title="Training Simulation"
-                    href="https://pidot.in"
-                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                    description="Research-first initiative to train students on AI, LLMs & global engineering standards"
-                  />
-              </div>
-            </MenuItem>
+            <HoveredLink href="enterprise" className="hover:opacity-90">
+              Enterprise
+            </HoveredLink>
 
-            {/* <MenuItem setActive={setActive} active={active} item="About"> */}
-              {/* <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/web-dev">About Us</HoveredLink>
-                <HoveredLink href="/interface-design">Leadership</HoveredLink>
-                <HoveredLink href="/seo">Our Story</HoveredLink>
-                <HoveredLink href="/seo">Contact</HoveredLink>
-              </div> */}
-              <HoveredLink href="#">About</HoveredLink>
-            {/* </MenuItem> */}
+            <HoveredLink href="about" className="hover:opacity-90">
+              About
+            </HoveredLink>
 
-            {/* <MenuItem setActive={setActive} active={active} item="Career">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/web-dev">Life at PI DOT</HoveredLink>
-                <HoveredLink href="/interface-design">Join our Team</HoveredLink>
-                <HoveredLink href="/seo">Support</HoveredLink>
-              </div> */}
-              <HoveredLink href="#">Career</HoveredLink>
-            {/* </MenuItem> */}
+            <HoveredLink href="career" className="hover:opacity-90">
+              Career
+            </HoveredLink>
 
-
-            {/* <MenuItem setActive={setActive} active={active} item="Blog">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/web-dev">Our Blog</HoveredLink>
-                <HoveredLink href="/web-dev">Case Studies</HoveredLink>
-                <HoveredLink href="/web-dev">Press & Media</HoveredLink>
-                <HoveredLink href="/web-dev">Research Papers</HoveredLink>
-                <HoveredLink href="/web-dev">Community & Events</HoveredLink>
-              </div> */}
-              <HoveredLink href="#">Blog</HoveredLink>
-            {/* </MenuItem> */}
-
-            {/* <MenuItem setActive={setActive} active={active} item="Beta"> */}
-                <HoveredLink href="/pagedemo">Beta</HoveredLink>
-            {/* </MenuItem> */}
+            <HoveredLink href="blog" className="hover:opacity-90">
+              Blog
+            </HoveredLink>
 
           </div>
-        </div>
+
+          {/* RIGHT */}
+          <div className="flex justify-end ">
+            <HoveredLink 
+             href="/admin/login"
+             className="px-5 py-2
+                        rounded-full
+                        bg-black
+                        text-white
+                        border border-[#f69507]
+                        shadow-shadow-[0_0_20px_rgba(251,146,60,0.3)]
+                        hover:bg-[#ffad33]
+                        hover:text-black
+                        hover:shadow-[0_0_30px_rgba(251,146,60,0.7)]
+                        transition-all duration-300"
+             >
+              Admin
+            </HoveredLink>
+          </div>
+
+        </div>    
 
         {/* Mobile Menu Icon */}
         <button
@@ -165,56 +161,49 @@ function Navbar({ className }: { className?: string }) {
               isOpen={openMenu === "Institutions"}
               toggle={() => toggleSubMenu("Institutions")}
               items={[
-                      { label: "Corporate Simulation", href: "/team" },
-                      { label: "Fermion AI Labs", href: "/mission" },
-                      { label: "Global Education for Schools", href: "/vision" },
+                      { label: "Corporate Simulation", href: "/corporate-simulation" },
+                      { label: "Fermion AI Labs", href: "/fermion-ai-labs" },
                     ]}
             />
 
             <MobileDropdown
               title="Enterprise"
+              href="/enterprise"
               isOpen={openMenu === "Enterprise"}
               toggle={() => toggleSubMenu("Enterprise")}
-              items={[
-                      { label: "Hiring Simulation", href: "/team" },
-                      { label: "Training Simulation", href: "/mission" },
-                    ]}
+              items={[]}
             />
 
             <MobileDropdown
               title="About"
+              href="/about"
               isOpen={openMenu === "About"}
               toggle={() => toggleSubMenu("About")}
-              items={[
-                      { label: "About Us", href: "/about-us" },
-                      { label: "Leadership", href: "/leadership" },
-                      { label: "Our Story", href: "/our-story" },
-                      { label: "Contact", href: "/contact" },
-                    ]}
+              items={[]}
             />
 
             <MobileDropdown
               title="Career"
+              href="/career"
               isOpen={openMenu === "Career"}
               toggle={() => toggleSubMenu("Career")}
-              items={[
-                      { label: "Life at PI DOT", href: "/team" },
-                      { label: "Join Our Team", href: "/careers" },
-                      { label: "Support", href: "/careers" },
-                    ]}
+              items={[]}
             />
 
             <MobileDropdown
               title="Blog"
+              href="/blog"
               isOpen={openMenu === "Blog"}
               toggle={() => toggleSubMenu("Blog")}
-              items={[
-                      { label: "Our Blog", href: "/team" },
-                      { label: "Case Studies", href: "/careers" },
-                      { label: "Press & Media", href: "/careers" },
-                      { label: "Research Papers", href: "/careers" },
-                      { label: "Community & Events", href: "/careers" },
-                    ]}
+              items={[]}
+            />
+
+            <MobileDropdown
+              title="Admin"
+              href="/login"
+              isOpen={openMenu === "Admin"}
+              toggle={() => toggleSubMenu("Admin")}
+              items={[]}
             />
           </motion.div>
         )}
@@ -225,11 +214,13 @@ function Navbar({ className }: { className?: string }) {
 
 function MobileDropdown({
   title,
+  href,
   isOpen,
   toggle,
   items,
 }: {
   title: string;
+  href?: string;
   isOpen: boolean;
   toggle: () => void;
   items: { label: string; href: string }[];
@@ -237,10 +228,14 @@ function MobileDropdown({
   return (
     <div className="border-b border-white/10 py-2">
       <button
+        
         onClick={toggle}
         className="w-full flex justify-between items-center text-lg text-white"
       >
-        {title}
+        
+        <Link href={href || "#"}>
+          {title}
+        </Link>
         <ChevronDown
           className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
         />

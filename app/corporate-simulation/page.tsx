@@ -11,6 +11,9 @@ import  HeroSection  from "@/features/institutions/corporate-simulation/sections
 import   TrustedCompanies   from "@/features/institutions/corporate-simulation/sections/TrustedBySection";
 import DeveloperExperienceSection from "@/features/institutions/corporate-simulation/sections/DeveloperExperienceSection";
 import IntegrateMorningSection from "@/features/institutions/corporate-simulation/sections/IntegrateMorningSection";
+import EditorSection from "@/features/institutions/corporate-simulation/sections/EditorSection";
+import EmailWithReactSection from "@/features/institutions/corporate-simulation/sections/EmailWithReactSection";
+import TestimonialSection from "@/features/institutions/corporate-simulation/sections/TestimonialSection";
 
 
 export default function CorporateSimulation() {
@@ -62,6 +65,9 @@ export default function CorporateSimulation() {
         <TrustedCompanies />
         <DeveloperExperienceSection />
         <IntegrateMorningSection />
+        <EditorSection />
+        <EmailWithReactSection />
+        <TestimonialSection />
       </div>
 
       {/* ================= FOOTER ================= */}

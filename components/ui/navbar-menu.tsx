@@ -111,11 +111,15 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  className = "",
+  ...rest
+}: any) => {
   return (
     <a
       {...rest}
-      className="text-neutral-200 hover:text-white"
+      className={`transition-all duration-300 ${className}`}
     >
       {children}
     </a>

@@ -17,14 +17,13 @@ export default function EditorSection() {
       />
 
       <h2 className="font-display text-[3rem] md:text-[3.5rem] tracking-tighter leading-[120%] text-center mb-5 effect-font-gradient">
-        Write using a delightful editor
+        Run Simulations with a  <br />Simple, Intuitive Interface
       </h2>
 
       <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/60 text-center mb-20">
-        A modern editor that makes it easy for anyone to write, format, and send
-        emails.
+        A structured dashboard that makes it easy for faculty to 
         <br className="hidden sm:block" />
-        Visually build your email and change the design by adding custom styles.
+        create, manage, and monitor simulations — without complexity.
       </p>
 
       {/* UI */}

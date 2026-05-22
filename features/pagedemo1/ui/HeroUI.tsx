@@ -7,10 +7,10 @@ export default function HeroUI() {
         style={{ fontFamily: "EB Garamond" }}
       >
         <span className="block overflow-hidden">
-          <span>#1</span> <span>Undetectable</span>
+          <span>Simulate</span> <span>Before</span>
         </span>
         <span className="block overflow-hidden">
-          <span>AI</span> <span>for</span> <span>Meetings</span>
+          <span>You</span> <span>Hire</span>
         </span>
       </h1>
 

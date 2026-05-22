@@ -19,22 +19,21 @@ export default function EmailWithReactSection() {
 
       {/* Heading */}
         <h2 className="font-display effect-font-styling text-[3rem] md:text-[3.5rem] tracking-tighter leading-[120%] effect-font-gradient mb-5 text-center">
-            Develop emails using React
+            Bring Corporate Simulation to Your Campus
         </h2>
 
         {/* Description */}
         <p className="text-base md:text-[1.125rem] md:leading-[1.5] text-white/70 font-normal text-balance text-center">
-            Create beautiful templates without having to deal with &lt;table&gt; layouts
-            and HTML.
-            <br className="hidden sm:block" /> Powered by react-email, our open source
-            component library.
+            Launch industry-led simulation programs for your students with complete academic support, 
+            <br className="hidden sm:block" /> 
+            structured frameworks, and seamless integration into your curriculum.
         </p>
 
         {/* CTA Buttons */}
         <div className="mx-auto my-10 flex flex-col justify-center gap-4 px-10 sm:max-w-none sm:flex-row sm:px-0 md:mb-20">
             {/* Primary Button */}
             <a
-            href="/signup"
+            href="#"
             className="
                 relative inline-flex items-center justify-center select-none
                 rounded-2xl h-12 px-5 text-base font-semibold text-white
@@ -52,7 +51,7 @@ export default function EmailWithReactSection() {
                 after:bg-repeat after:pointer-events-none
             "
             >
-            Get Started
+            Book a Demo
             <span className="text-[#70757E] opacity-100 -mr-2">
                 <svg
                 fill="none"
@@ -74,7 +73,7 @@ export default function EmailWithReactSection() {
 
             {/* Secondary Button */}
             <a
-            href="https://react.email/docs"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -87,7 +86,7 @@ export default function EmailWithReactSection() {
                 [&_svg]:text-gray-9
             "
             >
-            Check the Docs
+            Explore More
             <span className="text-[#70757E] opacity-100 -mr-2">
                 <svg
                 fill="none"

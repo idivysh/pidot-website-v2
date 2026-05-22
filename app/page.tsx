@@ -16,6 +16,7 @@ import { TypewriterEffectSmoothDemo } from "@/components/sections/typewriter-eff
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import PiDotGlow from "@/components/sections/pi-dot-glow";
 
+
 export default function Home() {
   const [isBannerOpen, setIsBannerOpen] = useState(true);
 
