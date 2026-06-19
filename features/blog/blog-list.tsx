@@ -1,30 +1,27 @@
-import BlogCard from "./blog-card";
+import { BlogPost } from "@/lib/blog-storage";
+import { BlogCard } from "./blog-card";
 
-export default function BlogList({
+interface BlogListProps {
+  posts: BlogPost[];
+  activeCategory: string;
+}
+
+export function BlogList({
   posts,
   activeCategory,
-}: any) {
+}: BlogListProps) {
   const filteredPosts =
-  activeCategory === "All"
-    ? posts
-    : posts.filter(
-        (post: any) =>
-          post.category === activeCategory
-      );
+    activeCategory === "All"
+      ? posts
+      : posts.filter(
+          (post) => post.category === activeCategory
+        );
+
   return (
-    <section className="space-y-12">
-        {filteredPosts.length === 0 ? (
-          <div className="py-20 text-center text-zinc-500">
-            No posts available
-          </div>
-        ) : (
-          filteredPosts.map((post: any, index: number) => (
-        <BlogCard
-            key={post.slug}
-            post={post}
-            isLast={index === filteredPosts.length - 1}
-        />
-        )))}
-    </section>
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {filteredPosts.map((post) => (
+        <BlogCard key={post.id} post={post} />
+      ))}
+    </div>
   );
 }

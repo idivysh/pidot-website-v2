@@ -1,155 +1,130 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 import {
+  getBlogs,
   updateBlog,
 } from "@/lib/blog-storage";
 
-import { getBlogs } from "@/lib/blog-storage";
-
 export default function BlogEditorPage() {
-
   const params = useParams();
 
-  const slug =
-    params.slug as string;
+  const slug = params.slug as string;
 
-  const [blocks, setBlocks] =
-    useState<any[]>([]);
+  const [blocks, setBlocks] = useState<any[]>([]);
 
-  // LOAD EXISTING BLOG CONTENT
+  // LOAD BLOG CONTENT
   useEffect(() => {
-
     const blogs = getBlogs();
 
-    const existingBlog =
-      blogs.find(
-        (blog: any) =>
-          blog.slug === slug
-      );
+    const blog = blogs.find(
+      (item) => item.slug === slug
+    );
 
-    if (
-      existingBlog &&
-      existingBlog.content
-    ) {
-
-      setBlocks(
-        existingBlog.content
-      );
+    if (blog) {
+      setBlocks(blog.content || []);
     }
-
   }, [slug]);
 
-  // ADD BLOCKS
+  // ADD BLOCK
   const addBlock = (type: string) => {
+    switch (type) {
+      case "heading":
+        setBlocks([
+          ...blocks,
+          {
+            type: "heading",
+            text: "",
+          },
+        ]);
+        break;
 
-    if (type === "heading") {
+      case "subheading":
+        setBlocks([
+          ...blocks,
+          {
+            type: "subheading",
+            text: "",
+          },
+        ]);
+        break;
 
-      setBlocks([
-        ...blocks,
-        {
-          type: "heading",
-          text: "",
-        },
-      ]);
-    }
+      case "paragraph":
+        setBlocks([
+          ...blocks,
+          {
+            type: "paragraph",
+            text: "",
+          },
+        ]);
+        break;
 
-    if (type === "subheading") {
+      case "image":
+        setBlocks([
+          ...blocks,
+          {
+            type: "image",
+            src: "",
+          },
+        ]);
+        break;
 
-      setBlocks([
-        ...blocks,
-        {
-          type: "subheading",
-          text: "",
-        },
-      ]);
-    }
-
-    if (type === "paragraph") {
-
-      setBlocks([
-        ...blocks,
-        {
-          type: "paragraph",
-          text: "",
-        },
-      ]);
-    }
-
-    if (type === "image") {
-
-      setBlocks([
-        ...blocks,
-        {
-          type: "image",
-          src: "",
-        },
-      ]);
-    }
-
-    if (type === "points") {
-
-      setBlocks([
-        ...blocks,
-        {
-          type: "points",
-          items: [""],
-        },
-      ]);
+      case "points":
+        setBlocks([
+          ...blocks,
+          {
+            type: "points",
+            items: [""],
+          },
+        ]);
+        break;
     }
   };
 
   // UPDATE BLOCK
   const updateBlock = (
     index: number,
-    data: any
+    updates: any
   ) => {
+    const updated = [...blocks];
 
-    const updatedBlocks = [...blocks];
-
-    updatedBlocks[index] = {
-      ...updatedBlocks[index],
-      ...data,
+    updated[index] = {
+      ...updated[index],
+      ...updates,
     };
 
-    setBlocks(updatedBlocks);
+    setBlocks(updated);
   };
 
   // DELETE BLOCK
   const deleteBlock = (
     index: number
   ) => {
-
-    const updatedBlocks =
+    const updated =
       blocks.filter(
-        (_: any, i: number) =>
-          i !== index
+        (_block, i) => i !== index
       );
 
-    setBlocks(updatedBlocks);
+    setBlocks(updated);
   };
 
-  // PUBLISH
+  // SAVE BLOG
   const handlePublish = () => {
-
     updateBlog(slug, {
       content: blocks,
     });
 
-    alert("Blog Published!");
+    alert("Blog Saved Successfully");
   };
 
   return (
     <main className="min-h-screen bg-black text-white">
-
       <div className="mx-auto max-w-5xl px-6 py-20">
 
         {/* HEADER */}
         <div className="mb-14">
-
           <h1 className="text-5xl font-bold">
             Blog Editor
           </h1>
@@ -157,7 +132,6 @@ export default function BlogEditorPage() {
           <p className="mt-4 text-zinc-400">
             Build your blog content.
           </p>
-
         </div>
 
         {/* TOOLBAR */}
@@ -170,15 +144,15 @@ export default function BlogEditorPage() {
             bg-zinc-950 p-4
           "
         >
-
           <button
             onClick={() =>
               addBlock("heading")
             }
             className="
               rounded-xl
-              bg-orange-500
+              bg-[#f69507]
               px-4 py-2 text-sm
+              text-black font-medium
             "
           >
             Main Heading
@@ -190,7 +164,7 @@ export default function BlogEditorPage() {
             }
             className="
               rounded-xl
-              bg-blue-500
+              bg-blue-600
               px-4 py-2 text-sm
             "
           >
@@ -216,7 +190,7 @@ export default function BlogEditorPage() {
             }
             className="
               rounded-xl
-              bg-pink-500
+              bg-pink-600
               px-4 py-2 text-sm
             "
           >
@@ -229,266 +203,248 @@ export default function BlogEditorPage() {
             }
             className="
               rounded-xl
-              bg-green-500
+              bg-green-600
               px-4 py-2 text-sm
             "
           >
             Bullet Points
           </button>
-
         </div>
 
         {/* BLOCKS */}
         <div className="space-y-10">
-
           {blocks.map(
-            (block: any, index: number) => {
-
-              return (
-
-                <div
-                  key={index}
+            (block, index) => (
+              <div
+                key={index}
+                className="
+                  relative rounded-3xl
+                  border border-zinc-800
+                  bg-zinc-950 p-6
+                "
+              >
+                {/* REMOVE */}
+                <button
+                  onClick={() =>
+                    deleteBlock(index)
+                  }
                   className="
-                    relative rounded-3xl
-                    border border-zinc-800
-                    bg-zinc-950 p-6
+                    absolute right-4 top-4
+                    rounded-lg bg-red-600
+                    px-3 py-1 text-xs
                   "
                 >
+                  Remove
+                </button>
 
-                  {/* DELETE BUTTON */}
-                  <button
-                    onClick={() =>
-                      deleteBlock(index)
+                {/* HEADING */}
+                {block.type ===
+                  "heading" && (
+                  <input
+                    type="text"
+                    value={block.text}
+                    placeholder="Main Heading"
+                    onChange={(e) =>
+                      updateBlock(
+                        index,
+                        {
+                          text:
+                            e.target.value,
+                        }
+                      )
                     }
                     className="
-                      absolute right-4 top-4
-                      rounded-lg
-                      bg-red-500
-                      px-3 py-1
-                      text-xs font-medium
+                      w-full bg-transparent
+                      text-5xl font-bold
+                      outline-none
                     "
-                  >
-                    Remove
-                  </button>
+                  />
+                )}
 
-                  {/* MAIN HEADING */}
-                  {block.type ===
-                    "heading" && (
+                {/* SUBHEADING */}
+                {block.type ===
+                  "subheading" && (
+                  <input
+                    type="text"
+                    value={block.text}
+                    placeholder="Sub Heading"
+                    onChange={(e) =>
+                      updateBlock(
+                        index,
+                        {
+                          text:
+                            e.target.value,
+                        }
+                      )
+                    }
+                    className="
+                      w-full bg-transparent
+                      text-3xl font-semibold
+                      outline-none
+                    "
+                  />
+                )}
 
+                {/* PARAGRAPH */}
+                {block.type ===
+                  "paragraph" && (
+                  <textarea
+                    rows={8}
+                    value={block.text}
+                    placeholder="Write paragraph..."
+                    onChange={(e) =>
+                      updateBlock(
+                        index,
+                        {
+                          text:
+                            e.target.value,
+                        }
+                      )
+                    }
+                    className="
+                      w-full bg-transparent
+                      text-lg leading-relaxed
+                      outline-none
+                    "
+                  />
+                )}
+
+                {/* IMAGE */}
+                {block.type ===
+                  "image" && (
+                  <div className="space-y-5">
                     <input
-                      type="text"
-                      placeholder="Main Heading"
-                      value={block.text}
-                      onChange={(e) =>
-                        updateBlock(index, {
-                          text:
-                            e.target.value,
-                        })
-                      }
-                      className="
-                        w-full
-                        bg-transparent
-                        pb-4
-                        text-5xl font-bold
-                        outline-none
-                      "
-                    />
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        const file =
+                          e.target
+                            .files?.[0];
 
-                  )}
+                        if (!file)
+                          return;
 
-                  {/* SUB HEADING */}
-                  {block.type ===
-                    "subheading" && (
+                        const imageUrl =
+                          URL.createObjectURL(
+                            file
+                          );
 
-                    <input
-                      type="text"
-                      placeholder="Sub Heading"
-                      value={block.text}
-                      onChange={(e) =>
-                        updateBlock(index, {
-                          text:
-                            e.target.value,
-                        })
-                      }
-                      className="
-                        w-full
-                        bg-transparent
-                        pb-3
-                        text-3xl font-semibold
-                        outline-none
-                      "
-                    />
-
-                  )}
-
-                  {/* PARAGRAPH */}
-                  {block.type ===
-                    "paragraph" && (
-
-                    <textarea
-                      rows={8}
-                      placeholder="Write paragraph..."
-                      value={block.text}
-                      onChange={(e) =>
-                        updateBlock(index, {
-                          text:
-                            e.target.value,
-                        })
-                      }
-                      className="
-                        w-full
-                        bg-transparent
-                        text-lg leading-relaxed
-                        outline-none
-                      "
-                    />
-
-                  )}
-
-                  {/* IMAGE */}
-                  {block.type ===
-                    "image" && (
-
-                    <div className="space-y-5">
-
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={(e) => {
-
-                          const file =
-                            e.target.files?.[0];
-
-                          if (!file) return;
-
-                          const imageUrl =
-                            URL.createObjectURL(
-                              file
-                            );
-
-                          updateBlock(index, {
+                        updateBlock(
+                          index,
+                          {
                             src: imageUrl,
-                          });
-                        }}
+                          }
+                        );
+                      }}
+                    />
+
+                    {block.src && (
+                      <img
+                        src={block.src}
+                        alt=""
+                        className="
+                          w-full rounded-3xl
+                        "
                       />
+                    )}
+                  </div>
+                )}
 
-                      {block.src && (
+                {/* BULLET POINTS */}
+                {block.type ===
+                  "points" && (
+                  <div>
+                    <div className="space-y-4">
+                      {block.items.map(
+                        (
+                          item: string,
+                          itemIndex: number
+                        ) => (
+                          <input
+                            key={
+                              itemIndex
+                            }
+                            type="text"
+                            value={item}
+                            placeholder="Point"
+                            onChange={(
+                              e
+                            ) => {
+                              const newItems =
+                                [
+                                  ...block.items,
+                                ];
 
-                        <img
-                          src={block.src}
-                          className="
-                            w-full rounded-3xl
-                          "
-                        />
+                              newItems[
+                                itemIndex
+                              ] =
+                                e.target.value;
 
+                              updateBlock(
+                                index,
+                                {
+                                  items:
+                                    newItems,
+                                }
+                              );
+                            }}
+                            className="
+                              w-full rounded-xl
+                              border border-zinc-700
+                              bg-black
+                              px-4 py-3
+                              outline-none
+                            "
+                          />
+                        )
                       )}
-
                     </div>
 
-                  )}
-
-                  {/* BULLET POINTS */}
-                  {block.type ===
-                    "points" && (
-
-                    <div>
-
-                      <div className="space-y-4">
-
-                        {block.items.map(
-                          (
-                            item: string,
-                            itemIndex: number
-                          ) => (
-
-                            <input
-                              key={itemIndex}
-                              type="text"
-                              placeholder="Point"
-                              value={item}
-                              onChange={(e) => {
-
-                                const newItems =
-                                  [...block.items];
-
-                                newItems[
-                                  itemIndex
-                                ] =
-                                  e.target.value;
-
-                                updateBlock(
-                                  index,
-                                  {
-                                    items:
-                                      newItems,
-                                  }
-                                );
-                              }}
-                              className="
-                                w-full rounded-xl
-                                border border-zinc-700
-                                bg-black
-                                px-4 py-3
-                                outline-none
-                              "
-                            />
-
-                          )
-                        )}
-
-                      </div>
-
-                      <button
-                        onClick={() => {
-
-                          updateBlock(index, {
+                    <button
+                      onClick={() =>
+                        updateBlock(
+                          index,
+                          {
                             items: [
                               ...block.items,
                               "",
                             ],
-                          });
-
-                        }}
-                        className="
-                          mt-5 rounded-xl
-                          bg-zinc-700
-                          px-4 py-2 text-sm
-                        "
-                      >
-                        Add Point
-                      </button>
-
-                    </div>
-
-                  )}
-
-                </div>
-
-              );
-            }
+                          }
+                        )
+                      }
+                      className="
+                        mt-5 rounded-xl
+                        bg-zinc-700
+                        px-4 py-2 text-sm
+                      "
+                    >
+                      Add Point
+                    </button>
+                  </div>
+                )}
+              </div>
+            )
           )}
-
         </div>
 
-        {/* PUBLISH */}
+        {/* SAVE */}
         <div className="mt-20">
-
           <button
-            onClick={handlePublish}
+            onClick={
+              handlePublish
+            }
             className="
               rounded-2xl
               bg-[#f69507]
               px-10 py-4
               text-lg font-semibold
+              text-black
             "
           >
-            Publish Blog
+            Save Blog
           </button>
-
         </div>
-
       </div>
-
     </main>
   );
 }

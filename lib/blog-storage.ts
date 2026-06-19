@@ -1,69 +1,232 @@
-export const getBlogs = () => {
+export interface BlogPost {
+  id: string;
 
+  slug: string;
+  title: string;
+  excerpt: string;
+
+  image: string;
+
+  category: string;
+  college: string;
+  
+  authorImage?: string;
+  author: string;
+
+  readTime: string;
+
+  featured?: boolean;
+
+  showOnBlogPage: boolean;
+
+  createdAt: string;
+
+  content: any[];
+
+  challenge?: string;
+  solution?: string;
+  outcome?: string;
+
+  stats?: {
+    label: string;
+    value: string;
+  }[];
+
+  gallery?: string[];
+}
+
+const STORAGE_KEY = "pidot_blogs";
+
+/* -------------------------------- */
+/* SEED BLOGS (FIRST LOAD ONLY) */
+/* -------------------------------- */
+
+const seedBlogs: BlogPost[] = [
+  {
+    id: "1",
+
+    slug: "welcome-blog",
+
+    title: "Welcome Blog",
+
+    excerpt:
+      "This is the first blog available on the platform.",
+
+    image: "/blogs/mit.jpg",
+
+    category: "General",
+
+    college: "",
+
+    author: "Admin",
+    authorImage: "/blog/roy.jpg",
+
+    readTime: "2 Min Read",
+
+    featured: true,
+
+    showOnBlogPage: true,
+
+    createdAt: new Date().toISOString(),
+
+    content: [
+      {
+        type: "heading",
+        text: "Welcome to the Blog Platform",
+      },
+
+      {
+        type: "paragraph",
+        text:
+          "This is a sample blog created to demonstrate the blogging system.",
+      },
+    ],
+  },
+];
+
+/* -------------------------------- */
+/* GET BLOGS */
+/* -------------------------------- */
+
+export function getBlogs(): BlogPost[] {
   if (typeof window === "undefined") {
-    return [];
+    return seedBlogs;
   }
 
-  const blogs =
-    localStorage.getItem("blogs");
+  const storedBlogs =
+    localStorage.getItem(STORAGE_KEY);
 
-  return blogs ? JSON.parse(blogs) : [];
-};
+  if (!storedBlogs) {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(seedBlogs)
+    );
 
-export const saveBlog = (blog: any) => {
+    return seedBlogs;
+  }
 
-  const existingBlogs = getBlogs();
+  return JSON.parse(storedBlogs);
+}
 
-  const updatedBlogs = [
-    blog,
-    ...existingBlogs,
-  ];
+/* -------------------------------- */
+/* SAVE BLOG */
+/* -------------------------------- */
+
+export function saveBlog(
+  blog: BlogPost
+) {
+  const blogs = getBlogs();
+
+  blogs.unshift(blog);
 
   localStorage.setItem(
-    "blogs",
+    STORAGE_KEY,
+    JSON.stringify(blogs)
+  );
+}
+
+/* -------------------------------- */
+/* UPDATE BLOG */
+/* -------------------------------- */
+
+export function updateBlog(
+  slug: string,
+  updates: Partial<BlogPost>
+) {
+  const blogs = getBlogs();
+
+  const updatedBlogs = blogs.map(
+    (blog) =>
+      blog.slug === slug
+        ? {
+            ...blog,
+            ...updates,
+          }
+        : blog
+  );
+
+  localStorage.setItem(
+    STORAGE_KEY,
     JSON.stringify(updatedBlogs)
   );
-};
+}
 
-export const deleteBlog = (slug: string) => {
+/* -------------------------------- */
+/* DELETE BLOG */
+/* -------------------------------- */
 
-  const existingBlogs = getBlogs();
+export function deleteBlog(
+  slug: string
+) {
+  const blogs = getBlogs();
 
   const updatedBlogs =
-    existingBlogs.filter(
-      (blog: any) =>
+    blogs.filter(
+      (blog) =>
         blog.slug !== slug
     );
 
   localStorage.setItem(
-    "blogs",
+    STORAGE_KEY,
     JSON.stringify(updatedBlogs)
   );
-};
+}
 
-export const updateBlog = (
-  slug: string,
-  updatedData: any
-) => {
+/* -------------------------------- */
+/* GET BLOG BY SLUG */
+/* -------------------------------- */
 
-  const existingBlogs = getBlogs();
+export function getBlogBySlug(
+  slug: string
+): BlogPost | undefined {
+  const blogs = getBlogs();
 
-  const updatedBlogs =
-    existingBlogs.map((blog: any) => {
+  return blogs.find(
+    (blog) =>
+      blog.slug === slug
+  );
+}
 
-      if (blog.slug === slug) {
+/* -------------------------------- */
+/* GET PUBLIC BLOGS */
+/* -------------------------------- */
 
-        return {
-          ...blog,
-          ...updatedData,
-        };
-      }
+export function getVisibleBlogs() {
+  return getBlogs()
+    .filter(
+      (blog) =>
+        blog.showOnBlogPage
+    )
+    .sort(
+      (a, b) =>
+        new Date(
+          b.createdAt
+        ).getTime() -
+        new Date(
+          a.createdAt
+        ).getTime()
+    );
+}
 
-      return blog;
-    });
+/* -------------------------------- */
+/* FEATURE BLOG */
+/* -------------------------------- */
+
+export function setFeaturedBlog(
+  slug: string
+) {
+  const blogs = getBlogs();
+
+  const updatedBlogs = blogs.map(
+    (blog) => ({
+      ...blog,
+      featured:
+        blog.slug === slug,
+    })
+  );
 
   localStorage.setItem(
-    "blogs",
+    STORAGE_KEY,
     JSON.stringify(updatedBlogs)
   );
-};
+}

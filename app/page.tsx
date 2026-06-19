@@ -40,7 +40,7 @@ export default function Home() {
       >
         <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
           Reach out to us to redefine hiring.{" "}
-          <a href="#" className="underline transition duration-200">
+          <a href="/contact-us" className="underline transition duration-200">
             Contact us
           </a>
         </p>

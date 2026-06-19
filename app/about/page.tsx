@@ -7,15 +7,12 @@ import { NavbarDemo } from "@/components/sections/navbar-menu";
 import { FooterDemo } from "@/components/sections/footer";
 import { StickyBanner } from "@/components/ui/sticky-banner";
 import PiDotGlow from "@/components/sections/pi-dot-glow";
-import HyperFocusHero from "@/features/about/HyperFocusHero";
-import OneServiceSection from "@/features/about/OneServiceSection";
-import FoundersSection from "@/features/about/FoundersSection";
-import UrbanAboutSection from "@/features/about/UrbanAboutSection";
-import NewsSection from "@/features/about/NewsSection";
+import AboutSection from "@/features/about/about-section";
+import TeamShowcase from "@/features/about/team-showcase";
 import { getBlogs } from "@/lib/blog-storage";
 
 
-export default function Enterprise() {
+export default function About() {
   const [isBannerOpen, setIsBannerOpen] = useState(true);
   const [blogs, setBlogs] = useState<any[]>([]);
 
@@ -55,7 +52,7 @@ export default function Enterprise() {
       >
         <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
           Reach out to us to redefine hiring.{" "}
-          <a href="#" className="underline transition duration-200">
+          <a href="/contact-us" className="underline transition duration-200">
             Contact us
           </a>
         </p>
@@ -77,11 +74,8 @@ export default function Enterprise() {
             : "pt-12 sm:pt-16 md:pt-12 lg:pt-0"
         }`}
       >
-         <HyperFocusHero />
-        <OneServiceSection />
-        <FoundersSection />
-        <UrbanAboutSection />
-        <NewsSection blogs={blogs} />
+        <AboutSection />
+        <TeamShowcase />
       </div>
 
       {/* ================= FOOTER ================= */}

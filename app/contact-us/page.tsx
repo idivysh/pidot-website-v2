@@ -7,19 +7,15 @@ import { NavbarDemo } from "@/components/sections/navbar-menu";
 import { FooterDemo } from "@/components/sections/footer";
 import { StickyBanner } from "@/components/ui/sticky-banner";
 import PiDotGlow from "@/components/sections/pi-dot-glow";
-
-import { BlogHero } from "@/features/blog/blog-hero";
-import { FeaturedPost } from "@/features/blog/featured-post";
-import { CategoryTabs } from "@/features/blog/category-tabs";
-import { BlogList } from "@/features/blog/blog-list";
-import { BlogCTA } from "@/features/blog/blog-cta";
+import ContactSection from "@/features/contact-us/contact-section";
+import ContactHero from "@/features/contact-us/contact-hero";
 
 import {
   BlogPost,
   getBlogs,
 } from "@/lib/blog-storage";
 
-export default function Blog() {
+export default function ContactUs() {
   const [isBannerOpen, setIsBannerOpen] = useState(true);
 
   const [activeCategory, setActiveCategory] =
@@ -102,43 +98,9 @@ export default function Blog() {
             : "pt-12 sm:pt-16 md:pt-12 lg:pt-0"
         }`}
       >
-        <section className="w-full min-h-screen bg-black">
-          <div className="mx-auto max-w-7xl px-4 py-6">
-            <BlogHero />
+        <ContactHero />
+        <ContactSection />
 
-            <div className="mt-16">
-              <CategoryTabs
-                activeCategory={
-                  activeCategory
-                }
-                setActiveCategory={
-                  setActiveCategory
-                }
-              />
-            </div>
-
-            {featured && (
-              <div className="mt-16">
-                <FeaturedPost
-                  post={featured}
-                />
-              </div>
-            )}
-
-            <div className="mt-16">
-              <BlogList
-                posts={blogs}
-                activeCategory={
-                  activeCategory
-                }
-              />
-            </div>
-
-            <div className="mt-24">
-              <BlogCTA />
-            </div>
-          </div>
-        </section>
       </div>
 
       {/* FOOTER */}

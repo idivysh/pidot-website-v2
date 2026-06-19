@@ -22,7 +22,7 @@ export default function AdminLoginPage() {
       password === "vamshi@pidot"
     ) {
 
-      router.push("/admin/dashboard");
+      router.push("../../admin");
 
     } else {
 
